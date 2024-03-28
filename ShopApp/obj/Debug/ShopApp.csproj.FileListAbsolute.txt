@@ -28,12 +28,10 @@ C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\bin\Debug\SharpVectors.Renderi
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\bin\Debug\SharpVectors.Runtime.Wpf.xml
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.AssemblyReference.cache
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\App.baml
-C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\MainWindow.g.cs
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\App.g.cs
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp_Content.g.cs
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp_MarkupCompile.cache
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp_MarkupCompile.lref
-C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\MainWindow.baml
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.g.resources
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.Properties.Resources.resources
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.GenerateResource.cache
@@ -42,3 +40,9 @@ C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.Up2Da
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.exe
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\bin\Debug\ShopApp.pdb
+C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\View\LoginView.g.cs
+C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\View\LoginView.baml
+C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\View\RegisterView.g.cs
+C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\View\RegisterView.baml
+C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\View\HomeView.g.cs
+C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\obj\Debug\View\HomeView.baml

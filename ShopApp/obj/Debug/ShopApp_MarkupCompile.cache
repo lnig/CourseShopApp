@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\App.xaml
-1219584333
+3-691692151
 21680773819
-51579654133
+10-1969156221
 29-242151048
-MainWindow.xaml;
+View\HomeView.xaml;View\LoginView.xaml;View\RegisterView.xaml;
 
 False
 
