@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/cart.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/credit_card.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/delivery.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/payment.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/user.svg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/illustrations/background.svg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/illustrations/login.svg")]
 

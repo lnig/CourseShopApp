@@ -24,7 +24,7 @@
                 Padding="5"
                 Margin="5"
                 Background="Transparent">
-                <Button Click="Button_Click_1">
+                <Button>
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="/Assets/Icons/defaultProductImage.png"/>
                     </Button.Background>

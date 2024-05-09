@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\
 ShopApp
 none
 false
 DEBUG;TRACE
-D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\App.xaml
-61558277761
-21680773819
-161673075270
-29-1443659584
-View\AddCourseView.xaml;View\ConfirmDeleteView.xaml;View\EditCourseView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\RegisterView.xaml;
+C:\Users\dmier\Desktop\WPF\ShopApp\App.xaml
+7885799255
+72037618283
+17-1187175412
+29324333526
+View\AddCourseView.xaml;View\CartView.xaml;View\ConfirmDeleteView.xaml;View\EditCourseView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\RegisterView.xaml;
 
-True
+False
 
