@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\
+D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Release\
 ShopApp
 none
 false
-DEBUG;TRACE
+TRACE
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\App.xaml
 439889317
 21680773819

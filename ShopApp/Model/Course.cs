@@ -13,18 +13,18 @@ namespace ShopApp.Model
         private string title;
         private string author;
         private string description;
-        private string longDescription;
+        private string shortDescription;
         private string prize;
         private string imageTitle;
 
-        public Course (int courseId, string categoryId, string title, string author, string description, string longDescription, string prize, string imageTitle)
+        public Course (int courseId, int categoryId, string title, string author, string description, string shortDescription, string prize, string imageTitle)
         {
             this.courseId = courseId;
             this.categoryId = categoryId;
             this.title = title;
             this.author = author;
             this.description = description;
-            this.longDescription = longDescription;
+            this.shortDescription = shortDescription;
             this.prize = prize;
             this.imageTitle = imageTitle;
         }
