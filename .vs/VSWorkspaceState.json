@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\ShopApp",
-    "\\ShopApp\\bin",
-    "\\ShopApp\\Model",
-    "\\ShopApp\\Properties",
-    "\\ShopApp\\View"
+    ""
   ],
-  "SelectedNode": "\\ShopApp\\View\\LoginView.xaml",
+  "SelectedNode": "\\ShopApp.sln",
   "PreviewInSolutionExplorer": false
 }

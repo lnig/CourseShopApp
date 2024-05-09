@@ -1,0 +1,25 @@
+﻿<Window x:Class="ShopApp.View.ConfirmDeleteView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopApp.View"
+        mc:Ignorable="d"
+        Title="ConfirmDeleteView" Height="200" Width="600">
+    <Grid>
+        <Grid Margin="10">
+            <StackPanel>
+                <TextBlock Text="Do you realy want to delete this course?"
+                           Foreground="#FF7D6BD9"
+                           FontSize="30"
+                           HorizontalAlignment="Center"
+                           Margin="10 20 10 10" FontWeight="Bold"/>
+
+                <DockPanel HorizontalAlignment="Center">
+                    <Button Content="Delete Course" Style="{StaticResource buttonSignIn}" Margin="5 20 0 10"/>
+                    <Button Content="Cancel" Style="{StaticResource buttonSignIn}" Margin="10 20 0 10" Background="LightPink"/>
+                </DockPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

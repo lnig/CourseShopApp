@@ -94,3 +94,5 @@ D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\ShopApp.csproj.CoreCompi
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\ShopApp.csproj.CopyComplete
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\ShopApp.exe
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\ShopApp.pdb
+D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\View\AddCourseView.g.cs
+D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\View\AddCourseView.baml

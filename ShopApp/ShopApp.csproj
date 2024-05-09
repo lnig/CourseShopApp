@@ -126,6 +126,12 @@
     <Compile Include="View\AddCourseView.xaml.cs">
       <DependentUpon>AddCourseView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ConfirmDeleteView.xaml.cs">
+      <DependentUpon>ConfirmDeleteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditCourseView.xaml.cs">
+      <DependentUpon>EditCourseView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
@@ -136,6 +142,14 @@
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
     <Page Include="View\AddCourseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConfirmDeleteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditCourseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
