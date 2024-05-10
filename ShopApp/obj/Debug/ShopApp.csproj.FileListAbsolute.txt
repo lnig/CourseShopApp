@@ -152,3 +152,7 @@ C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\ShopApp.Properties.Resources.resour
 C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\ShopApp.csproj.GenerateResource.cache
 C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\ShopApp.csproj.CoreCompileInputs.cache
 C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\ShopApp.csproj.Up2Date
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\View\CourseDetailsView.g.cs
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\View\ProfileView.g.cs
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\View\CourseDetailsView.baml
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\View\ProfileView.baml

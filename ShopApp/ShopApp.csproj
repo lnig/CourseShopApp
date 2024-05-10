@@ -132,6 +132,9 @@
     <Compile Include="View\ConfirmDeleteView.xaml.cs">
       <DependentUpon>ConfirmDeleteView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CourseDetailsView.xaml.cs">
+      <DependentUpon>CourseDetailsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\EditCourseView.xaml.cs">
       <DependentUpon>EditCourseView.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,9 @@
     </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
@@ -153,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ConfirmDeleteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CourseDetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,6 +182,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\ProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\RegisterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -227,8 +241,10 @@
     <Content Include="Assets\Icons\credit_card.svg" />
     <Content Include="Assets\Icons\delivery.svg" />
     <Content Include="Assets\Icons\payment.svg" />
+    <Content Include="Assets\Icons\star.svg" />
     <Content Include="Assets\Icons\user.svg" />
     <Content Include="Assets\Illustrations\background.svg" />
+    <Resource Include="Assets\Illustrations\programming.jpg" />
     <Content Include="Assets\Illustrations\login.svg" />
   </ItemGroup>
   <ItemGroup>
