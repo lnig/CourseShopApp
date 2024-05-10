@@ -1,11 +1,7 @@
 ﻿<Application x:Class="ShopApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-<<<<<<< HEAD
-             StartupUri="/View/ProfileView.xaml">
-=======
-             StartupUri="/View/HomeView.xaml">
->>>>>>> 3ebfca7ab37b69432a87943f63562bf903e3a943
+             StartupUri="/View/CartView.xaml">
     <Application.Resources>
  
         <Style x:Key="titleText" TargetType="TextBlock">
