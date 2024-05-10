@@ -96,3 +96,17 @@ D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\ShopApp.exe
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\ShopApp.pdb
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\View\AddCourseView.g.cs
 D:\C# files\Projekt_WPF\CourseShopApp\ShopApp\obj\Debug\View\AddCourseView.baml
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\ShopApp.csproj.AssemblyReference.cache
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\App.baml
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\View\AddCourseView.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\View\ConfirmDeleteView.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\View\EditCourseView.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\View\HomeView.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\View\LoginView.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\View\RegisterView.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\App.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\ShopApp_Content.g.cs
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\ShopApp_MarkupCompile.cache
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\ShopApp_MarkupCompile.lref
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\ShopApp.exe
+C:\Users\niedz\Source\Repos\CourseShopApp\ShopApp\obj\Debug\ShopApp.pdb

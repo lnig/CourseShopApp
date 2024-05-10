@@ -11,6 +11,7 @@
 
 using SharpVectors.Converters;
 using ShopApp;
+using ShopApp.View;
 using System;
 using System.Diagnostics;
 using System.Windows;
