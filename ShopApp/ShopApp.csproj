@@ -209,11 +209,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Assets\Fonts\Raleway-Light.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Assets\Icons\add.bmp" />
+    <Resource Include="Assets\Icons\cart.bmp" />
+    <Resource Include="Assets\Icons\close.png" />
+    <Resource Include="Assets\Icons\customers.bmp" />
+    <Resource Include="Assets\Icons\email.png" />
+    <Resource Include="Assets\Icons\facebook.png" />
+    <Resource Include="Assets\Icons\google.png" />
+    <Resource Include="Assets\Icons\minimize.png" />
+    <Resource Include="Assets\Icons\password.png" />
+    <Resource Include="Assets\Icons\twitter.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -222,26 +233,17 @@
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Icons\close.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Icons\email.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Icons\password.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Icons\minimize.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Icons\google.png" />
-    <Resource Include="Assets\Icons\facebook.png" />
-    <Resource Include="Assets\Icons\twitter.png" />
     <Content Include="Assets\Icons\cart.svg" />
     <Content Include="Assets\Icons\credit_card.svg" />
+    <Resource Include="Assets\Icons\defaultProductImage.png" />
     <Content Include="Assets\Icons\delivery.svg" />
+    <Resource Include="Assets\Icons\empty_star.bmp" />
+    <Resource Include="Assets\Icons\favourite.bmp" />
+    <Resource Include="Assets\Icons\inbox.bmp" />
+    <Resource Include="Assets\Icons\menu.png" />
+    <Resource Include="Assets\Icons\orders.bmp" />
+    <Resource Include="Assets\Icons\overview.bmp" />
     <Content Include="Assets\Icons\payment.svg" />
-    <Content Include="Assets\Icons\star.svg" />
     <Content Include="Assets\Icons\user.svg" />
     <Content Include="Assets\Illustrations\background.svg" />
     <Resource Include="Assets\Illustrations\programming.jpg" />

@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FC:\Users\dmier\Desktop\WPF\ShopApp\View\AddCourseView.xaml;;
 FC:\Users\dmier\Desktop\WPF\ShopApp\View\CartView.xaml;;
 FC:\Users\dmier\Desktop\WPF\ShopApp\View\ConfirmDeleteView.xaml;;
@@ -9,4 +10,13 @@ FC:\Users\dmier\Desktop\WPF\ShopApp\View\HomeView.xaml;;
 FC:\Users\dmier\Desktop\WPF\ShopApp\View\LoginView.xaml;;
 FC:\Users\dmier\Desktop\WPF\ShopApp\View\ProfileView.xaml;;
 FC:\Users\dmier\Desktop\WPF\ShopApp\View\RegisterView.xaml;;
+=======
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\AddCourseView.xaml;;
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\CartView.xaml;;
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\ConfirmDeleteView.xaml;;
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\EditCourseView.xaml;;
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\HomeView.xaml;;
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\LoginView.xaml;;
+FC:\Users\niedz\source\repos\CourseShopApp\ShopApp\View\RegisterView.xaml;;
+>>>>>>> 3ebfca7ab37b69432a87943f63562bf903e3a943
 
