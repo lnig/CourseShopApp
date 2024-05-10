@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\niedz\source\repos\CourseShopApp\ShopApp\App.xaml
-61558277761
-21680773819
-161673075270
+7885799255
+72037618283
+16894913206
 29-555796198
-View\AddCourseView.xaml;View\ConfirmDeleteView.xaml;View\EditCourseView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\RegisterView.xaml;
+View\AddCourseView.xaml;View\CartView.xaml;View\ConfirmDeleteView.xaml;View\EditCourseView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\RegisterView.xaml;
 
-True
+False
 
