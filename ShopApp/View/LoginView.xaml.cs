@@ -93,5 +93,12 @@ namespace ShopApp.View
         {
             Application.Current.Shutdown();
         }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterView registerView = new RegisterView();
+            registerView.Show();
+            this.Close();
+        }
     }
 }

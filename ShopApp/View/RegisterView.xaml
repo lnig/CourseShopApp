@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
-        xmlns:local="clr-namespace:ShopApp"
+        xmlns:local="clr-namespace:ShopApp" xmlns:viewmodel="clr-namespace:ShopApp.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:RegisterViewModel}"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
         Background="Transparent"
         Title="Sign In" Height="450" Width="800"
@@ -19,7 +19,7 @@
         <Image Source="/Assets/Icons/close.png" Grid.Column="2" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}" Height="30" Width="30"/>
 
         <Border Background="#FFFFFE"  MouseDown="Border_MouseDown">
-            <StackPanel Margin="0 50 0 0">
+            <StackPanel Margin="0 30 0 0">
 
                 <TextBlock Style="{StaticResource titleText}" Foreground="#FF7D6BD9" Margin="0 0 0 30"><Run Text="Sign "/><Run Language="pl-pl" Text="up"/><Run Text=" to App"/></TextBlock>
 
@@ -31,9 +31,11 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="/Assets/Icons/email.png" Height="20" />
+                            <!--
+                            <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\user.svg" Height="20"/>
+                            -->
                             <TextBlock x:Name="textName" MouseDown="textName_MouseDown" Text="Name" Style="{StaticResource textHint}"/>
-                            <TextBox x:Name="txtName" LostFocus="txtName_LostFocus" TextChanged="txtName_TextChanged" Style="{StaticResource textBox}"/>
+                            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" x:Name="txtName" LostFocus="txtName_LostFocus" TextChanged="txtName_TextChanged" Style="{StaticResource textBox}"/>
                         </Grid>
                     </Border>
 
@@ -43,10 +45,12 @@
                                 <ColumnDefinition Width="auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-
-                            <Image Source="/Assets/Icons/email.png" Height="20" />
+                            
+                            <!--
+                            <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\user.svg" Height="20"/>
+                            -->
                             <TextBlock x:Name="textSurname" MouseDown="textSurname_MouseDown" Text="Surname" Style="{StaticResource textHint}"/>
-                            <TextBox x:Name="txtSurname" LostFocus="txtSurname_LostFocus" TextChanged="txtSurname_TextChanged" Style="{StaticResource textBox}"/>
+                            <TextBox Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}" x:Name="txtSurname" LostFocus="txtSurname_LostFocus" TextChanged="txtSurname_TextChanged" Style="{StaticResource textBox}"/>
                         </Grid>
                     </Border>
                 </StackPanel>
@@ -57,10 +61,12 @@
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-
-                        <Image Source="/Assets/Icons/email.png" Height="20" />
+                        
+                        <!--
+                        <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\email.svg" Height="16"/>
+                        -->
                         <TextBlock x:Name="textEmail" MouseDown="textEmail_MouseDown" Text="Email" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtEmail" LostFocus="txtEmail_LostFocus" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}"/>
+                        <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" x:Name="txtEmail" LostFocus="txtEmail_LostFocus" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
@@ -70,14 +76,18 @@
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-
-                        <Image Source="/Assets/Icons/password.png" Height="20" />
+                        
+                        <!--
+                        <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\password.svg" Height="20" Margin="3 0 2 0"/>
+                        -->
                         <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword" LostFocus="txtPassword_LostFocus" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"/>
+                        <PasswordBox PasswordChanged="PasswordBox_PasswordChanged" x:Name="txtPassword" LostFocus="txtPassword_LostFocus" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
-                <Button Content="Sign Up" Style="{StaticResource buttonSignIn}" Margin="0 20 0 10"/>
+                <Label FontSize="10"  Margin="70 0" Foreground="#EB4C60" x:Name="errorMessage" Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisibilityConverter}}" Content="{Binding ErrorMessage}"/>
+
+                <Button Content="Sign Up" Style="{StaticResource buttonSignIn}" Margin="0 10 0 10" Command="{Binding RegisterCommand}"/>
 
                 <TextBlock Text="or sign in with " Style="{StaticResource normalText}" Margin="0 0 0 0" FontWeight="Regular" Foreground="#323743"/>
 
@@ -97,15 +107,15 @@
         </Border>
 
         <Border Background="#FFFFFF" Grid.Column="2">
-            <StackPanel>
+            <StackPanel VerticalAlignment="Center">
                 <Grid>
-                    <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\Assets\Illustrations\background.svg"  RenderTransformOrigin="0.5,0.5">
-                       
-                    </svgc:SvgViewbox>
-                    <StackPanel VerticalAlignment="Center" Margin="0 30 0 0">
+                    <!--
+                    <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\Assets\Illustrations\background.svg"  RenderTransformOrigin="0.5,0.5"/>
+                    -->
+                    <StackPanel Margin="0 30 0 0">
                         <TextBlock Text="Already have an account?" Style="{StaticResource titleText}" Margin="0 0 0 0" TextWrapping="Wrap" FontSize="32"/>
                         <TextBlock Text="Click the button below to explore our services" Style="{StaticResource normalText}" Opacity="0.8" Margin="20 10 20 40" Cursor="Hand"/>
-                        <Button Content="Sign In" Style="{StaticResource buttonSignUp}" Padding="1,1,1,1"/>
+                        <Button Content="Sign In" Style="{StaticResource buttonSignUp}" Click="SignIn_Click" Padding="1,1,1,1"/>
                     </StackPanel>
                 </Grid>
             </StackPanel>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +9,18 @@ namespace ShopApp.Model
 {
     public class Category
     {
-        public int categoryId;
-        public int parentCategoryId;
-        public string name;
+        [Key]
+        public int CategoryId { get; set; }
+        public int? ParentCategoryId { get; set; }
+        public string Name { get; set; }
 
-        public Category(int categoryId, int parentCategoryId, string name)
+        public Category() { }
+
+        public Category(int categoryId, int? parentCategoryId, string name)
         {
-            this.categoryId = categoryId;
-            this.parentCategoryId = parentCategoryId;
-            this.name = name;
+            CategoryId = categoryId;
+            ParentCategoryId = parentCategoryId;
+            Name = name;
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ShopApp.View
@@ -17,7 +18,7 @@ namespace ShopApp.View
     /// <summary>
     /// Logika interakcji dla klasy ProfileView.xaml
     /// </summary>
-    public partial class ProfileView : Window
+    public partial class ProfileView : UserControl
     {
         public ProfileView()
         {

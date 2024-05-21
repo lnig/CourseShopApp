@@ -16,8 +16,10 @@
         </Grid.ColumnDefinitions>
 
         <Image Source="/Assets/Icons/close.png" Grid.Column="1" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}"/>
-
+        
+     
         <Border Background="#FFFFFF">
+            <!--
             <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\Assets\Illustrations\background.svg"  RenderTransformOrigin="0.5,0.5">
                 <svgc:SvgViewbox.RenderTransform>
                     <TransformGroup>
@@ -28,13 +30,14 @@
                     </TransformGroup>
                 </svgc:SvgViewbox.RenderTransform>
             </svgc:SvgViewbox>
+                -->
         </Border>
 
         <Grid>
             <StackPanel VerticalAlignment="Center" Margin="0 30 0 0">
                 <TextBlock Text="New Here?" Style="{StaticResource titleText}" Margin="0 0 0 0"/>
                 <TextBlock Text="Enter your personal info and create new account to connect us" Style="{StaticResource normalText}" Opacity="0.8" Margin="20 10 20 40" Cursor="Hand"/>
-                <Button Content="Sign Up" Style="{StaticResource buttonSignUp}" Padding="1,1,1,1"/>
+                <Button Content="Sign Up" Style="{StaticResource buttonSignUp}" Click="SignUp_Click" Padding="1,1,1,1"/>
             </StackPanel>
         </Grid>
 
@@ -50,7 +53,9 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Image Source="/Assets/Icons/email.png" Height="20" />
+                        <!--
+                        <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\email.svg" Height="16"/>
+                        -->
                         <TextBlock x:Name="textEmail" MouseDown="textEmail_MouseDown" Text="Email" Style="{StaticResource textHint}"/>
                         <TextBox x:Name="txtEmail" LostFocus="txtEmail_LostFocus" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}"/>
                     </Grid>
@@ -63,7 +68,9 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Image Source="/Assets/Icons/password.png" Height="20" />
+                        <!--
+                        <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\password.svg" Height="20" Margin="3 0 2 0"/>
+                        -->
                         <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}"/>
                         <PasswordBox x:Name="txtPassword" LostFocus="txtPassword_LostFocus" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"/>
                     </Grid>

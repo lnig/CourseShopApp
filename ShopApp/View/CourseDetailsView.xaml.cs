@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ShopApp.View
@@ -17,16 +18,11 @@ namespace ShopApp.View
     /// <summary>
     /// Logika interakcji dla klasy CourseDetailsView.xaml
     /// </summary>
-    public partial class CourseDetailsView : Window
+    public partial class CourseDetailsView : UserControl
     {
         public CourseDetailsView()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
