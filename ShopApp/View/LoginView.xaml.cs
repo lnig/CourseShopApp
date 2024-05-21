@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,23 @@ namespace ShopApp.View
         public LoginView()
         {
             InitializeComponent();
+            DataContext = new LoginViewModel();
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is LoginViewModel viewModel)
+            {
+                viewModel.UpdatePassword(sender as PasswordBox);
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is ViewModel.LoginViewModel viewModel)
+            {
+                viewModel.LoginCommand.Execute(this);
+            }
         }
 
         private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
@@ -54,14 +72,6 @@ namespace ShopApp.View
             else
             {
                 textPassword.Visibility = Visibility.Visible;
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Password))
-            {
-                MessageBox.Show("Success");
             }
         }
 

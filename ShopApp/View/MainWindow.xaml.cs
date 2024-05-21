@@ -21,6 +21,7 @@ namespace ShopApp.View
     {
         public MainWindow()
         {
+            InitializeComponent();
         }
     }
 }

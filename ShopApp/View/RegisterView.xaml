@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
-        xmlns:local="clr-namespace:ShopApp" xmlns:viewmodel="clr-namespace:ShopApp.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:RegisterViewModel}"
+        xmlns:local="clr-namespace:ShopApp" xmlns:viewmodel="clr-namespace:ShopApp.ViewModel"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
         Background="Transparent"
         Title="Sign In" Height="450" Width="800"

@@ -8,6 +8,7 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
         Background="Transparent"
         Title="Sign In" Height="450" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         >
     <Grid>
         <Grid.ColumnDefinitions>
@@ -57,7 +58,7 @@
                         <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\email.svg" Height="16"/>
                         -->
                         <TextBlock x:Name="textEmail" MouseDown="textEmail_MouseDown" Text="Email" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtEmail" LostFocus="txtEmail_LostFocus" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}"/>
+                        <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" x:Name="txtEmail" LostFocus="txtEmail_LostFocus" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
@@ -72,11 +73,13 @@
                         <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\password.svg" Height="20" Margin="3 0 2 0"/>
                         -->
                         <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword" LostFocus="txtPassword_LostFocus" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"/>
+                        <PasswordBox PasswordChanged="PasswordBox_PasswordChanged" x:Name="txtPassword" LostFocus="txtPassword_LostFocus" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
-                <Button Content="Sign In" Style="{StaticResource buttonSignIn}" Margin="0 20 0 10"/>
+                <Label FontSize="10"  Margin="70 0" Foreground="#EB4C60" x:Name="errorMessage" Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisibilityConverter}}" Content="{Binding ErrorMessage}"/>
+
+                <Button Content="Sign In" Style="{StaticResource buttonSignIn}" Command="{Binding LoginCommand}" Margin="0 20 0 10"/>
 
                 <TextBlock Text="or sign in with " Style="{StaticResource normalText}" Margin="0 0 0 0" FontWeight="Regular" Foreground="#323743"/>
 
