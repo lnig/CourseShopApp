@@ -13,10 +13,11 @@ namespace ShopApp
         public DbSet<Category> category { get; set; }
 
         public DbSet<Client> client { get; set; }
+        public DbSet<Course> course { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=wpfshop;user=root;password=root;charset=utf8mb4");
+            optionsBuilder.UseMySQL("server=localhost;database=wpfshop;user=User;password=User;charset=utf8mb4");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

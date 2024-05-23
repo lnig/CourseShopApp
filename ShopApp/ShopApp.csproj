@@ -483,6 +483,7 @@
     <Content Include="Assets\Icons\password.svg" />
     <Content Include="Assets\Icons\email.svg" />
     <Content Include="Assets\Icons\payment.svg" />
+    <Resource Include="Assets\Icons\star.bmp" />
     <Content Include="Assets\Icons\user.svg" />
     <Content Include="Assets\Illustrations\background.svg" />
     <Resource Include="Assets\Illustrations\programming.jpg" />

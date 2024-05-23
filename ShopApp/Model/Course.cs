@@ -18,8 +18,10 @@ namespace ShopApp.Model
         public string ShortDescription { get; set; }
         public string Prize { get; set; }
         public string ImageTitle { get; set; }
+        public float Rating { get; set; }
+        public bool IsFavorite { get; set; }
 
-        public Course(int courseId, int categoryId, string title, string author, string description, string shortDescription, string prize, string imageTitle)
+        public Course(int courseId, int categoryId, string title, string author, string description, string shortDescription, string prize, string imageTitle, float rating, bool isFavorite)
         {
             CourseId = courseId;
             CategoryId = categoryId;
@@ -29,6 +31,8 @@ namespace ShopApp.Model
             ShortDescription = shortDescription;
             Prize = prize;
             ImageTitle = imageTitle;
+            Rating = rating;
+            IsFavorite = isFavorite;
         }
     }
 }
