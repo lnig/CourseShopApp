@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\niedz\\Desktop\\Wpf\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\Wpf\\shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\Wpf\\shopapp\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\mysqlserverversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\Wpf\\shopapp\\mysqlserverversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\mysqlserverversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\Wpf\\shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\Wpf\\shopapp\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\wpf\\shopapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\Wpf\\shopapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -38,19 +38,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 14,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MySqlServerVersion.cs",
               "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\Wpf\\ShopApp\\MySqlServerVersion.cs",
               "RelativeDocumentMoniker": "ShopApp\\MySqlServerVersion.cs",
@@ -58,12 +82,11 @@
               "RelativeToolTip": "ShopApp\\MySqlServerVersion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T17:16:54.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T17:16:54.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\Wpf\\ShopApp\\DataContext.cs",
               "RelativeDocumentMoniker": "ShopApp\\DataContext.cs",
@@ -71,12 +94,11 @@
               "RelativeToolTip": "ShopApp\\DataContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T17:16:53.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T17:16:53.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\Wpf\\ShopApp\\ViewModel\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "ShopApp\\ViewModel\\HomeViewModel.cs",
@@ -89,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HomeView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\Wpf\\ShopApp\\View\\HomeView.xaml.cs",
               "RelativeDocumentMoniker": "ShopApp\\View\\HomeView.xaml.cs",
@@ -97,12 +119,11 @@
               "RelativeToolTip": "ShopApp\\View\\HomeView.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T12:26:46.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T12:26:46.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\Wpf\\ShopApp\\Model\\Course.cs",
               "RelativeDocumentMoniker": "ShopApp\\Model\\Course.cs",
@@ -110,8 +131,7 @@
               "RelativeToolTip": "ShopApp\\Model\\Course.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T12:24:25.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T12:24:25.476Z"
             },
             {
               "$type": "Document",
@@ -127,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "HomeView.xaml",
               "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\Wpf\\ShopApp\\View\\HomeView.xaml",
               "RelativeDocumentMoniker": "ShopApp\\View\\HomeView.xaml",
