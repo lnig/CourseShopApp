@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              xmlns:local="clr-namespace:ShopApp.View"
-             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:vm="clr-namespace:ShopApp.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1184">
@@ -13,274 +13,261 @@
         <vm:HomeViewModel/>
     </UserControl.DataContext>
 
-    <Border Background="#fffffe" BorderThickness="0 3 0 0" BorderBrush="#c6c6c5" CornerRadius="0">
-        <Grid>
+    <Border Background="#fffffe">
+        <Grid Margin="8 8 8 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-            <!--Left Menu-->
-            <StackPanel  Margin="0 0 0 0">
-                <!--Top Right Section-->
-                <Border BorderThickness="0 0 0 3" BorderBrush="#c6c6c5" Margin="0 0 0 5">
+            <StackPanel Grid.Row="0" Width="906" HorizontalAlignment="Left">
+                <!--Search Form-->
+                <DockPanel LastChildFill="True" Margin="0 8">
+                    <Button Background="#565e6d" Content="Search" DockPanel.Dock="Right" Foreground="White" Width="140" Height="35"/>
+                    <Border Background="#F3F4F6" Margin="0 0 32 0">
+                        <Grid Margin="7 9">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="textSearch" MouseDown="textSearch_MouseDown" Text="Search..." Style="{StaticResource textHint}"/>
+                            <TextBox x:Name="txtSearch" LostFocus="txtSearch_LostFocus" TextChanged="txtSearch_TextChanged" Style="{StaticResource textBox}"/>
+                        </Grid>
+                    </Border>
+                </DockPanel>
+
+                <!--Product Results and Sort Section-->
+                <DockPanel LastChildFill="False" Margin="4 12 4 16">
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                        <TextBlock Text="Product Results" FontWeight="Bold" FontSize="24"/>
+                        <TextBlock Text="1001 products" FontSize="12" Margin="8 0 0 0" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                        <TextBlock VerticalAlignment="Center" Text="Sort by" FontSize="16" Margin="8 4"/>
+                        <ComboBox SelectedIndex="0" BorderThickness="0" FontSize="16" FontWeight="SemiBold" VerticalContentAlignment="Center" Width="120" HorizontalContentAlignment="Center">
+                            <ComboBoxItem Content="Last posted"/>
+                        </ComboBox>
+                    </StackPanel>
+                </DockPanel>
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="912" />
+                    <ColumnDefinition Width="256" />
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Margin="0 0 8 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--Product-->
+                            <StackPanel Grid.Column="0">
+                                <StackPanel Background="#F8F9FA" Margin="12 0 12 12">
+                                    <Image Source="/Assets/Icons/defaultProductImage.png" />
+                                    <DockPanel LastChildFill="False">
+                                        <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
+                                        <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
+                                    </DockPanel>
+                                    <TextBlock Height="50" TextWrapping="WrapWithOverflow">
+                                        Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
+                                    </TextBlock>
+                                    <DockPanel LastChildFill="False" Margin="0 10 0 0">
+                                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                            <TextBlock Text="$" FontSize="20"/>
+                                            <TextBlock Text="330" FontSize="20"/>
+                                        </StackPanel>
+                                        <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
+                                    </DockPanel>
+                                </StackPanel>
+
+                                <StackPanel Background="#F8F9FA" Margin="12 0 12 12">
+                                    <Image Source="/Assets/Icons/defaultProductImage.png" />
+                                    <DockPanel LastChildFill="False">
+                                        <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
+                                        <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
+                                    </DockPanel>
+                                    <TextBlock Height="50" TextWrapping="WrapWithOverflow">
+        Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
+                                    </TextBlock>
+                                    <DockPanel LastChildFill="False" Margin="0 10 0 0">
+                                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                            <TextBlock Text="$" FontSize="20"/>
+                                            <TextBlock Text="330" FontSize="20"/>
+                                        </StackPanel>
+                                        <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
+                                    </DockPanel>
+                                </StackPanel>
+
+                                <StackPanel Background="#F8F9FA" Margin="12 0 12 12">
+                                    <Image Source="/Assets/Icons/defaultProductImage.png" />
+                                    <DockPanel LastChildFill="False">
+                                        <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
+                                        <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
+                                    </DockPanel>
+                                    <TextBlock Height="50" TextWrapping="WrapWithOverflow">
+        Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
+                                    </TextBlock>
+                                    <DockPanel LastChildFill="False" Margin="0 10 0 0">
+                                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                            <TextBlock Text="$" FontSize="20"/>
+                                            <TextBlock Text="330" FontSize="20"/>
+                                        </StackPanel>
+                                        <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
+                                    </DockPanel>
+                                </StackPanel>
+                                <!-- Repeat Product Template as Needed -->
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+                                <StackPanel Background="#F8F9FA" Margin="12 0 12 12">
+                                    <Image Source="/Assets/Icons/defaultProductImage.png" />
+                                    <DockPanel LastChildFill="False">
+                                        <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
+                                        <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
+                                    </DockPanel>
+                                    <TextBlock Height="50" TextWrapping="WrapWithOverflow">
+                                        Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
+                                    </TextBlock>
+                                    <DockPanel LastChildFill="False" Margin="0 10 0 0">
+                                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                            <TextBlock Text="$" FontSize="20"/>
+                                            <TextBlock Text="330" FontSize="20"/>
+                                        </StackPanel>
+                                        <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
+                                    </DockPanel>
+                                </StackPanel>
+                                <!-- Repeat Product Template as Needed -->
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2">
+                                <StackPanel Background="#F8F9FA" Margin="12 0 12 12">
+                                    <Image Source="/Assets/Icons/defaultProductImage.png" />
+                                    <DockPanel LastChildFill="False">
+                                        <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
+                                        <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
+                                    </DockPanel>
+                                    <TextBlock Height="50" TextWrapping="WrapWithOverflow">
+                                        Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
+                                    </TextBlock>
+                                    <DockPanel LastChildFill="False" Margin="0 10 0 0">
+                                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                            <TextBlock Text="$" FontSize="20"/>
+                                            <TextBlock Text="330" FontSize="20"/>
+                                        </StackPanel>
+                                        <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
+                                    </DockPanel>
+                                </StackPanel>
+                                <!-- Repeat Product Template as Needed -->
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!--Main Content Right Side(Filters)-->
+                <StackPanel Grid.Column="1" Margin="12 -44 12 24">
                     <StackPanel>
-                        <DockPanel LastChildFill="True">
-                            <Button DockPanel.Dock="Right" BorderThickness="0" Background="Transparent">
-                                <Image Source="/Assets/Icons/cart.bmp" Height="30" Width="30"/>
-                            </Button>
-                            <TextBlock FontWeight="Bold" FontSize="20" Text="Our Products" DockPanel.Dock="Left" VerticalAlignment="Center" TextAlignment="Center"/>
-                        </DockPanel>
-                    </StackPanel>
-                </Border>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="4*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-
-                    <!--Main Content Left Side-->
-                    <StackPanel Grid.Column="0" Grid.Row="0" Margin="5 0 10 0">
-                        <!--Search section-->
-                        <DockPanel LastChildFill="True">
-                            <Button Background="#565e6d" Content="Search" DockPanel.Dock="Right" Foreground="White" Margin="20 0 0 0" Padding="30 5"/>
-                            <StackPanel Orientation="Horizontal" Background="#f3f4f6">
-                                <Image Source="/Assets/Icons/search.bmp" />
-                                <TextBlock Foreground="#c5c7cd" VerticalAlignment="Center" Text="Search ..." Margin="5 0 0 0"/>
-                            </StackPanel>
-                        </DockPanel>
-
-                        <!--Product Results and Sort Section-->
-                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
-                                <TextBlock Text="Product Results" FontWeight="Bold"/>
-                                <TextBlock Text="1001" FontSize="10" Margin="5 0 0 0"/>
-                                <TextBlock Text="products" FontSize="10" Margin="2 0 0 0"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
-                                <TextBlock VerticalAlignment="Center" Text="Sort by" />
-                                <ComboBox SelectedIndex="0" BorderThickness="0">
-                                    <ComboBoxItem Content="Last posted"/>
-                                </ComboBox>
-                            </StackPanel>
-                        </DockPanel>
-
-                        <ScrollViewer>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="1*" />
-                                    <ColumnDefinition Width="1*" />
-                                    <ColumnDefinition Width="1*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-
-                                <StackPanel Grid.Column="0" Grid.Row="0">
-                                    <!--Product-->
-                                    <StackPanel Margin="5 10 5 0">
-                                        <Image Source="/Assets/Icons/defaultProductImage.png" />
-                                        <DockPanel LastChildFill="False">
-                                            <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
-                                            <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
-                                        </DockPanel>
-                                        <TextBlock Height="50" TextWrapping="WrapWithOverflow">
-                                            Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
-                                        </TextBlock>
-                                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                                <TextBlock Text="$" FontSize="20"/>
-                                                <TextBlock Text="330" FontSize="20"/>
-                                            </StackPanel>
-                                            <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                    <StackPanel Margin="5 10 5 0">
-                                        <Image Source="/Assets/Icons/defaultProductImage.png" />
-                                        <DockPanel LastChildFill="False">
-                                            <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
-                                            <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
-                                        </DockPanel>
-                                        <TextBlock Height="50" TextWrapping="WrapWithOverflow">
-                                            Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
-                                        </TextBlock>
-                                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                                <TextBlock Text="$" FontSize="20"/>
-                                                <TextBlock Text="330" FontSize="20"/>
-                                            </StackPanel>
-                                            <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                </StackPanel>
-
-                                <StackPanel Grid.Column="1" Grid.Row="0">
-                                    <StackPanel Margin="5 10 5 0">
-                                        <Image Source="/Assets/Icons/defaultProductImage.png" />
-                                        <DockPanel LastChildFill="False">
-                                            <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
-                                            <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
-                                        </DockPanel>
-                                        <TextBlock Height="50" TextWrapping="WrapWithOverflow">
-                                            Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
-                                        </TextBlock>
-                                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                                <TextBlock Text="$" FontSize="20"/>
-                                                <TextBlock Text="330" FontSize="20"/>
-                                            </StackPanel>
-                                            <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                    <StackPanel Margin="5 10 5 0">
-                                        <Image Source="/Assets/Icons/defaultProductImage.png" />
-                                        <DockPanel LastChildFill="False">
-                                            <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
-                                            <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
-                                        </DockPanel>
-                                        <TextBlock Height="50" TextWrapping="WrapWithOverflow">
-                                            Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
-                                        </TextBlock>
-                                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                                <TextBlock Text="$" FontSize="20"/>
-                                                <TextBlock Text="330" FontSize="20"/>
-                                            </StackPanel>
-                                            <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                </StackPanel>
-
-                                <StackPanel Grid.Column="2" Grid.Row="0">
-                                    <StackPanel Margin="5 10 5 0">
-                                        <Image Source="/Assets/Icons/defaultProductImage.png" />
-                                        <DockPanel LastChildFill="False">
-                                            <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
-                                            <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
-                                        </DockPanel>
-                                        <TextBlock Height="50" TextWrapping="WrapWithOverflow">
-                                            Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
-                                        </TextBlock>
-                                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                                <TextBlock Text="$" FontSize="20"/>
-                                                <TextBlock Text="330" FontSize="20"/>
-                                            </StackPanel>
-                                            <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                    <StackPanel Margin="5 10 5 0">
-                                        <Image Source="/Assets/Icons/defaultProductImage.png" />
-                                        <DockPanel LastChildFill="False">
-                                            <TextBlock Text="Product Name" DockPanel.Dock="Left" FontWeight="Heavy"/>
-                                            <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
-                                        </DockPanel>
-                                        <TextBlock Height="50" TextWrapping="WrapWithOverflow">
-                                            Litwo ojczyzno moja ty jestes jak zdrowie ile cie trzeba
-                                        </TextBlock>
-                                        <DockPanel LastChildFill="False" Margin="0 10 0 0">
-                                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                                <TextBlock Text="$" FontSize="20"/>
-                                                <TextBlock Text="330" FontSize="20"/>
-                                            </StackPanel>
-                                            <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                </StackPanel>
-                            </Grid>
-                        </ScrollViewer>
-                    </StackPanel>
-
-                    <!--Main Content Right Side(Filters)-->
-                    <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,0,5,24">
                         <DockPanel LastChildFill="False">
-                            <TextBlock VerticalAlignment="Center" Text="Filters" DockPanel.Dock="Left"/>
-                            <ComboBox SelectedIndex="0" DockPanel.Dock="Right">
-                                <ComboBoxItem Content="Clear All"/>
-                            </ComboBox>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontWeight="SemiBold" Text="Filters" DockPanel.Dock="Left"/>
+                            <Button Content="Clear All" DockPanel.Dock="Right" Background="Transparent" BorderBrush="Transparent" FontSize="14" FontWeight="SemiBold"/>
                         </DockPanel>
 
-                        <StackPanel Margin="0 10 0 0">
-                            <TextBlock Text="Salary Range"/>
-                            <DockPanel Margin="0 4 0 0">
-                                <ComboBox SelectedIndex="0" DockPanel.Dock="Left">
-                                    <ComboBoxItem Content="20"/>
-                                </ComboBox>
-                                <ComboBox SelectedIndex="0" DockPanel.Dock="Right">
-                                    <ComboBoxItem Content="600"/>
-                                </ComboBox>
-                                <TextBlock TextAlignment="Center" VerticalAlignment="Center" Text="to"/>
+                        <Separator Height="1" Background="#EAECF0" Margin="0 24"/>
+
+                        <StackPanel>
+                            <TextBlock Text="Salary Range" FontSize="16" FontWeight="Bold"/>
+                            <DockPanel Margin="0 12 0 0">
+                                <TextBox DockPanel.Dock="Left" BorderBrush="Transparent" BorderThickness="0" Background="#F3F4F6" Width="77" Height="28" VerticalContentAlignment="Center"/>
+                                <TextBlock TextAlignment="Center" VerticalAlignment="Center" Text="to" FontSize="14" Margin="32 0"/>
+                                <TextBox DockPanel.Dock="Right" BorderBrush="Transparent" BorderThickness="0" Background="#F3F4F6" Width="78 " Height="28" VerticalContentAlignment="Center"/>
                             </DockPanel>
                         </StackPanel>
 
-                        <StackPanel Margin="0 5 0 0">
-                            <TextBlock Text="Condition 1"/>
-                            <CheckBox Content="Checkbox"/>
-                            <CheckBox Content="Checkbox"/>
-                            <CheckBox Content="Checkbox"/>
+                        <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
+
+                        <StackPanel>
+                            <TextBlock Text="Condition 1" FontSize="16" FontWeight="Bold"/>
+                            <CheckBox Content="Checkbox" Margin="0 12 0 4"/>
+                            <CheckBox Content="Checkbox" Margin="0 4"/>
+                            <CheckBox Content="Checkbox" Margin="0 4"/>
                         </StackPanel>
 
-                        <StackPanel Margin="0 5 0 0">
-                            <TextBlock Text="Condition 2"/>
-                            <CheckBox Content="Checkbox"/>
-                            <CheckBox Content="Checkbox"/>
-                            <CheckBox Content="Checkbox"/>
+                        <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
+
+                        <StackPanel>
+                            <TextBlock Text="Condition 2" FontSize="16" FontWeight="Bold"/>
+                            <CheckBox Content="Checkbox" Margin="0 12 0 4"/>
+                            <CheckBox Content="Checkbox" Margin="0 4"/>
+                            <CheckBox Content="Checkbox" Margin="0 4"/>
                         </StackPanel>
 
+                        <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
+
                         <StackPanel Margin="0 5 0 0">
-                            <TextBlock Text="Rating"/>
-                            <StackPanel Orientation="Horizontal">
-                                <CheckBox/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
+                            <TextBlock Text="Rating" FontSize="16" FontWeight="Bold" Margin="0 0 0 8"/>
+                            <StackPanel Orientation="Horizontal" Height="30">
+                                <CheckBox Height="15" Margin="0 0 8 0"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
                             </StackPanel>
+
                             <StackPanel Orientation="Horizontal">
-                                <CheckBox/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
+                                <CheckBox Height="15" Margin="0 0 8 0"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
                             </StackPanel>
+
                             <StackPanel Orientation="Horizontal">
-                                <CheckBox/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
+                                <CheckBox Height="15" Margin="0 0 8 0"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
                             </StackPanel>
+
                             <StackPanel Orientation="Horizontal">
-                                <CheckBox/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
+                                <CheckBox Height="15" Margin="0 0 8 0"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
                             </StackPanel>
+
                             <StackPanel Orientation="Horizontal">
-                                <CheckBox/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
+                                <CheckBox Height="15" Margin="0 0 8 0"/>
+                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
                             </StackPanel>
+
                             <StackPanel Orientation="Horizontal">
-                                <CheckBox/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20"/>
+                                <CheckBox Height="15" Margin="0 0 8 0"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
-                </Grid>
-            </StackPanel>
+                </StackPanel>
+            </Grid>
         </Grid>
     </Border>
 </UserControl>

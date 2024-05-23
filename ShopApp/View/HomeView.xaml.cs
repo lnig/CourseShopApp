@@ -24,5 +24,31 @@ namespace ShopApp.View
         {
             InitializeComponent();
         }
+
+        private void textSearch_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtSearch.Focus();
+            textSearch.Visibility = Visibility.Collapsed;
+        }
+
+        private void txtSearch_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                textSearch.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSearch.Text) && txtSearch.Text.Length > 0)
+            {
+                textSearch.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textSearch.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

@@ -23,5 +23,19 @@ namespace ShopApp.View
         {
             InitializeComponent();
         }
+
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+
+        }
+
+        private void ListBox_Content_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
     }
 }

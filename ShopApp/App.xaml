@@ -5,7 +5,7 @@
              xmlns:views="clr-namespace:ShopApp.View"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
-             StartupUri="/View/LoginView.xaml">
+             StartupUri="/View/MainWindow.xaml">
     <Application.Resources>
 
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>

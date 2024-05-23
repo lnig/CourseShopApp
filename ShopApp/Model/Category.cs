@@ -11,12 +11,12 @@ namespace ShopApp.Model
     {
         [Key]
         public int CategoryId { get; set; }
-        public int? ParentCategoryId { get; set; }
+        public int ParentCategoryId { get; set; }
         public string Name { get; set; }
 
         public Category() { }
 
-        public Category(int categoryId, int? parentCategoryId, string name)
+        public Category(int categoryId, int parentCategoryId, string name)
         {
             CategoryId = categoryId;
             ParentCategoryId = parentCategoryId;

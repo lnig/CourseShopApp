@@ -91,14 +91,6 @@ namespace ShopApp.View
             }
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left)
-            {
-                this.DragMove();
-            }
-        }
-
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
@@ -109,6 +101,14 @@ namespace ShopApp.View
             RegisterView registerView = new RegisterView();
             registerView.Show();
             this.Close();
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

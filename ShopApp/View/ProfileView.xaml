@@ -10,9 +10,11 @@
              d:DesignHeight="900" d:DesignWidth="1184">
 
 
-    <Grid>
+    <Grid Background="White">
+        
+        <Label Content="Your Informations" FontSize="24" Margin="28 8" VerticalAlignment="Top" FontWeight="Bold"></Label>
 
-        <StackPanel Orientation="Horizontal" Margin="30 30">
+        <StackPanel Orientation="Horizontal" Margin="8 62 8 30">
 
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="312">
                 <StackPanel Orientation="Vertical" Margin="0 24">
@@ -28,7 +30,7 @@
                 </StackPanel>
             </Border>
 
-            <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="796" Margin="16 0">
+            <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="840" Margin="16 0">
                 <StackPanel Orientation="Vertical" Margin="0 24">
                     <StackPanel Orientation="Vertical" Margin="24 0 0 0" >
 

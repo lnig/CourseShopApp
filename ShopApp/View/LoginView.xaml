@@ -17,9 +17,9 @@
         </Grid.ColumnDefinitions>
 
         <Image Source="/Assets/Icons/close.png" Grid.Column="1" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}"/>
-        
-     
-        <Border Background="#FFFFFF">
+
+
+        <Border Background="#FFFFFF" MouseDown="Border_MouseDown">
             <!--
             <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\Sem.VI\WPF\ShopApp\ShopApp\Assets\Illustrations\background.svg"  RenderTransformOrigin="0.5,0.5">
                 <svgc:SvgViewbox.RenderTransform>

@@ -25,14 +25,17 @@
 
     </UserControl.Resources>
 
-    <Grid>
+    <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="824px"/>
-            <ColumnDefinition Width="360px"/>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="360"/>
         </Grid.ColumnDefinitions>
 
 
-        <StackPanel Grid.Column="0" Margin="8 16" Width="808">
+        <StackPanel Grid.Column="0" Margin="8,8,8,8">
+
+            <Label Content="Your Cart" FontSize="24" Margin="20 0 0 12" FontWeight="Bold"></Label>
 
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="808">
                 <StackPanel Orientation="Vertical" Margin="12 6 0 0">
@@ -40,7 +43,7 @@
                         <!--
                         <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\cart.svg"/>
                         -->
-                        <TextBlock Text="Order Summary" Style="{StaticResource HeaderStyle}" Height="24" Margin="10" Foreground="#171A1F"/>
+                        <TextBlock Text="Order Summary" Style="{StaticResource HeaderStyle}" Height="24" Margin="10 4" Foreground="#171A1F"/>
                     </StackPanel>
 
                     <ListView Margin="12 12 24 12">
@@ -160,14 +163,14 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1" Width="340" Height="580" Background="#F8F9FA" Margin="10,16,10,288">
+        <StackPanel Grid.Column="2" Background="#F8F9FA" Margin="7,62,10,258">
             <StackPanel Margin="30 0 30 0">
 
                 <StackPanel Orientation="Horizontal">
                     <!--
                     <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\payment.svg" Margin="0 30 8 0" Height="24"/>
                     -->
-                    <TextBlock Text="Payment Method" Style="{StaticResource HeaderStyle}" Margin="0 30 0 0"/>
+                    <TextBlock Text="Payment Method" Style="{StaticResource HeaderStyle}" Margin="0 24 0 0"/>
                 </StackPanel>
 
                 <TextBlock Text="Change Payment Method" Margin="0 10 0 10" Foreground="#171A1F" FontSize="12"/>
