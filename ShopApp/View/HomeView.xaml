@@ -16,17 +16,17 @@
 
 
         <DataTemplate x:Key="CourseTemplate">
-            <StackPanel Background="#F8F9FA" Margin="12 0 12 12">
+            <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
                 <Image Source="{Binding ImageTitle}" />
-                <DockPanel LastChildFill="False">
-                    <TextBlock Text="{Binding Title}" DockPanel.Dock="Left" FontWeight="Bold"/>
+                <DockPanel LastChildFill="False" Margin="16 4">
+                    <TextBlock Text="{Binding Title}" Width="220" FontSize="16" DockPanel.Dock="Left" FontWeight="Heavy" TextTrimming="WordEllipsis"/>
                     <Image Source="/Assets/Icons/favourite.bmp" DockPanel.Dock="Right" Height="20" Width="20"/>
                 </DockPanel>
-                <TextBlock Height="50" TextWrapping="WrapWithOverflow" Text="{Binding Description}"/>
-                <DockPanel LastChildFill="False" Margin="0 10 0 0">
+                <TextBlock Height="50" TextWrapping="WrapWithOverflow" Text="{Binding Description}" Margin="16 4"/>
+                <DockPanel LastChildFill="False" Margin="16 6 16 12">
                     <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                        <TextBlock Text="$" FontSize="20"/>
-                        <TextBlock Text="{Binding Prize}" FontSize="20"/>
+                        <TextBlock Text="$" FontSize="24" FontWeight="ExtraBold"/>
+                        <TextBlock Text="{Binding Prize}" FontSize="24" FontWeight="ExtraBold"/>
                     </StackPanel>
                     <Image Source="/Assets/Icons/add.bmp" Height="25" Width="25" DockPanel.Dock="Right"/>
                 </DockPanel>
