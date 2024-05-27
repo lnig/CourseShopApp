@@ -343,13 +343,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataContext.cs" />
+    <Compile Include="Utils\DataContext.cs" />
     <Compile Include="Model\Administrator.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Course.cs" />
-    <Compile Include="MySqlServerVersion.cs" />
-    <Compile Include="StringToVisibilityConverter.cs" />
+    <Compile Include="Model\UserSession.cs" />
+    <Compile Include="Utils\MySqlServerVersion.cs" />
+    <Compile Include="Repository\UsersRepository.cs" />
+    <Compile Include="Utils\StringToVisibilityConverter.cs" />
     <Compile Include="ViewModel\CartViewModel.cs" />
     <Compile Include="ViewModel\CourseDetailsViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />

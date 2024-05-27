@@ -1,4 +1,6 @@
-﻿using ShopApp.View;
+﻿using ShopApp.Model;
+using ShopApp.Repository;
+using ShopApp.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,24 +63,25 @@ namespace ShopApp.ViewModel
             return !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
         }
 
-        private bool UserExist(object parameter)
-        {
-            bool userfound = false;
-            using (var context = new DataContext())
-            {
-                userfound = context.client.Any(client => client.Email == Email && client.Password == Password);
-            }
-            return userfound;
-        }
-
         private void Login(object parameter)
         {
+            var repository = new UsersRepository();
             try
             {
                 if (CanLogin(parameter))
                 {
-                    if (UserExist(parameter))
+                    if (repository.UserExist(Email, Password))
                     {
+                        var user = repository.GetUserDetails(Email);
+                        if (user is Client client)
+                        {
+                            UserSession.Instance.SetClient(client);
+                        }
+                        else if (user is Administrator admin)
+                        {
+                            UserSession.Instance.SetAdministrator(admin);
+                        }
+
                         OpenHomeView();
                         CloseCurrentWindow();
                     }
@@ -86,14 +89,11 @@ namespace ShopApp.ViewModel
                     {
                         ErrorMessage = "Wrong email or password";
                     }
-
                 }
                 else
                 {
                     ErrorMessage = "Please fill in the required fields";
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -134,4 +134,5 @@ namespace ShopApp.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
+
 }
