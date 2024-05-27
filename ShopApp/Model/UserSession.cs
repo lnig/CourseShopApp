@@ -12,11 +12,12 @@ namespace ShopApp.Model
         private static UserSession _instance;
         private static readonly object _lock = new object();
 
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public string UserType { get; private set; }
+        public int UserId { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string UserType { get; set; }
 
 
         private UserSession() { }
@@ -41,6 +42,7 @@ namespace ShopApp.Model
 
         public void SetClient(Client client)
         {
+            UserId = client.Id;
             Name = client.Name;
             Surname = client.Surname;
             Email = client.Email;
@@ -50,6 +52,7 @@ namespace ShopApp.Model
 
         public void SetAdministrator(Administrator administrator)
         {
+            UserId = administrator.Id;
             Name = administrator.Name;
             Surname = administrator.Surname;
             Email = administrator.Email;

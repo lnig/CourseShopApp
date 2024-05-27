@@ -1,5 +1,6 @@
 ﻿using ShopApp.Model;
 using ShopApp.Repository;
+using ShopApp.Utils;
 using ShopApp.View;
 using System;
 using System.Collections.Generic;
@@ -55,10 +56,10 @@ namespace ShopApp.ViewModel
 
         public LoginViewModel()
         {
-            LoginCommand = new RelayCommand(Login, CanLogin);
+            LoginCommand = new RelayCommand(Login);
         }
 
-        private bool CanLogin(object parameter)
+        private bool CanLogin()
         {
             return !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
         }
@@ -68,7 +69,7 @@ namespace ShopApp.ViewModel
             var repository = new UsersRepository();
             try
             {
-                if (CanLogin(parameter))
+                if (CanLogin())
                 {
                     if (repository.UserExist(Email, Password))
                     {

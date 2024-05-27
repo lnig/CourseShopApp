@@ -56,6 +56,48 @@ namespace ShopApp.Repository
                 return admin;
             }
         }
+
+        public void UpdateUser(UserSession user)
+        {
+            using (var context = new DataContext())
+            {
+                if (user.UserType == "Client")
+                {
+                    var dbClient = context.client.Find(user.UserId);
+                    if (dbClient != null)
+                    {
+                        dbClient.Name = user.Name;
+                        dbClient.Surname = user.Surname;
+                        dbClient.Email = user.Email;
+                        dbClient.Password = user.Password;
+                        context.SaveChanges();
+                    }
+                }
+                else if (user.UserType == "Administrator")
+                {
+                    var dbAdmin = context.administrator.Find(user.UserId);
+                    if (dbAdmin != null)
+                    {
+                        dbAdmin.Name = user.Name;
+                        dbAdmin.Surname = user.Surname;
+                        dbAdmin.Email = user.Email;
+                        dbAdmin.Password = user.Password;
+                        context.SaveChanges();
+                    }
+                }
+            }
+        }
+
+        public string getName(int userId)
+        {
+            using (var context = new DataContext())
+            { 
+                return context.client.Find(userId).Name;
+            }
+        }
+
+
+
     }
 
 }

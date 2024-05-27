@@ -21,10 +21,29 @@ namespace ShopApp.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
+        private ProfileViewModel viewModel = new ProfileViewModel(); 
         public ProfileView()
         {
             InitializeComponent();
             DataContext = new ProfileViewModel();
+        }
+
+        private void ClearFields(object sender, RoutedEventArgs e)
+        {
+            TextName.Text = FirstNameTextBox.Text;
+            TextEmail.Text = EmailTextBox.Text;
+
+            FirstNameTextBox.Text = string.Empty;
+            LastNameTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is ProfileViewModel viewModel)
+            {
+                viewModel.UpdatePassword(sender as PasswordBox);
+            }
         }
     }
 }

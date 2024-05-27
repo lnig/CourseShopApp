@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using ShopApp.Model;
+using ShopApp.Utils;
 
 namespace ShopApp.ViewModel
 {
@@ -76,13 +77,13 @@ namespace ShopApp.ViewModel
             RegisterCommand = new RelayCommand(Register);
         }
 
-        private bool CanRegister(object parameter)
+        private bool CanRegister()
         {
             return !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(Surname) &&
                    !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
         }
 
-        private bool EmailTaken(object parameter)
+        private bool EmailTaken()
         {
             bool emailfound = false;
             using (var context = new DataContext())
@@ -96,9 +97,9 @@ namespace ShopApp.ViewModel
         {
             try
             {
-                if(CanRegister(parameter))
+                if(CanRegister())
                 {
-                    if (!EmailTaken(parameter))
+                    if (!EmailTaken())
                     {
                         using (var context = new DataContext())
                         {
@@ -140,34 +141,6 @@ namespace ShopApp.ViewModel
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-    }
-
-    public class RelayCommand : ICommand
-    {
-        private readonly Action<object> _execute;
-        private readonly Func<object, bool> _canExecute;
-
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
-        {
-            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            _canExecute = canExecute;
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            return _canExecute == null || _canExecute(parameter);
-        }
-
-        public void Execute(object parameter)
-        {
-            _execute(parameter);
-        }
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
         }
     }
 }
