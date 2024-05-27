@@ -24,6 +24,17 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+        <ControlTemplate x:Key="roundbutton" TargetType="Button">
+            <Grid>
+                <Ellipse x:Name="backgroundElement" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}" />
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Fill" TargetName="backgroundElement" Value="AliceBlue"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Window.Resources>
 
     <Grid>
@@ -40,7 +51,9 @@
                  ItemTemplate="{DynamicResource NavigationDataTemplate}"
                  ItemsSource="{StaticResource NavigationMenuItems}"
                  MouseDown="ListBox_Content_MouseDown"/>
-
+        <Button Template="{StaticResource roundbutton}" Height="50" Width="50" Background="Red" Foreground="Blue">Witam</Button>
         <ContentControl Grid.Column="1" Style="{StaticResource NavigationContentStyle}" MouseDown="ListBox_Content_MouseDown"/>
+
     </Grid>
+
 </Window>
