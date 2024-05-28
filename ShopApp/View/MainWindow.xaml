@@ -51,7 +51,6 @@
                  ItemTemplate="{DynamicResource NavigationDataTemplate}"
                  ItemsSource="{StaticResource NavigationMenuItems}"
                  MouseDown="ListBox_Content_MouseDown"/>
-        <Button Template="{StaticResource roundbutton}" Height="50" Width="50" Background="Red" Foreground="Blue">Witam</Button>
         <ContentControl Grid.Column="1" Style="{StaticResource NavigationContentStyle}" MouseDown="ListBox_Content_MouseDown"/>
 
     </Grid>

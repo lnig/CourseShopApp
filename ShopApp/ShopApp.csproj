@@ -352,7 +352,6 @@
     <Compile Include="Utils\MySqlServerVersion.cs" />
     <Compile Include="Repository\UsersRepository.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
-    <Compile Include="Utils\StringToVisibilityConverter.cs" />
     <Compile Include="ViewModel\CartViewModel.cs" />
     <Compile Include="ViewModel\CourseDetailsViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ShopApp.ViewModel;
 
 namespace ShopApp.View
 {
@@ -23,6 +24,7 @@ namespace ShopApp.View
         public CartView()
         {
             InitializeComponent();
+            DataContext = new CartViewModel();
         }
     }
 }

@@ -5,9 +5,11 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using ShopApp.Model;
+using ShopApp.Repository;
 using ShopApp.Utils;
 
 namespace ShopApp.ViewModel
@@ -19,6 +21,9 @@ namespace ShopApp.ViewModel
         private string _email;
         private string _password;
         private string _errorMessage;
+
+
+        private UsersRepository usersRepository= new UsersRepository();
 
         public string Name
         {
@@ -83,31 +88,19 @@ namespace ShopApp.ViewModel
                    !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
         }
 
-        private bool EmailTaken()
-        {
-            bool emailfound = false;
-            using (var context = new DataContext())
-            {
-                emailfound = context.client.Any(client => client.Email == Email);
-            }
-            return emailfound;
-        }
-
         private void Register(object parameter)
         {
+
             try
             {
                 if(CanRegister())
                 {
-                    if (!EmailTaken())
+                    if (!usersRepository.EmailTaken(Email))
                     {
-                        using (var context = new DataContext())
-                        {
-                            var client = new Client(Name, Surname, Email, Password);
-                            context.client.Add(client);
-                            context.SaveChanges();
-                        }
-                        ErrorMessage = "User registered successfully!";
+
+                        var client = new Client(Name, Surname, Email, Password);
+                        usersRepository.AddUser(client);
+                        ErrorMessage = "User registered successfully!";               
                     }
                     else
                     {

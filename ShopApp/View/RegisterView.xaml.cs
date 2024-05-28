@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ShopApp.View
 {
-    /// <summary>
-    /// Logika interakcji dla klasy RegisterView.xaml
-    /// </summary>
     public partial class RegisterView : Window
     {
         public RegisterView()

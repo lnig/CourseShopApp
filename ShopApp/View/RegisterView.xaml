@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
-        xmlns:local="clr-namespace:ShopApp" xmlns:viewmodel="clr-namespace:ShopApp.ViewModel"
+        xmlns:local="clr-namespace:ShopApp" xmlns:viewmodel="clr-namespace:ShopApp.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:RegisterViewModel}"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
         Background="Transparent"
-        Title="Sign In" Height="450" Width="800"
-        >
+        Title="Sign In" Height="450" Width="800">
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -86,7 +85,7 @@
                     </Grid>
                 </Border>
 
-                <Label FontSize="10"  Margin="70 0" Foreground="#EB4C60" x:Name="errorMessage" Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisibilityConverter}}" Content="{Binding ErrorMessage}"/>
+                <Label FontSize="10"  Margin="70 0" Foreground="#EB4C60" x:Name="errorMessage" Content="{Binding ErrorMessage}"/>
 
                 <Button Content="Sign Up" Style="{StaticResource buttonSignIn}" Margin="0 10 0 10" Command="{Binding RegisterCommand}"/>
 

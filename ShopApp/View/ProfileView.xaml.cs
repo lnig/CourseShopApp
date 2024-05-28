@@ -16,12 +16,8 @@ using System.Windows.Shapes;
 
 namespace ShopApp.View
 {
-    /// <summary>
-    /// Logika interakcji dla klasy ProfileView.xaml
-    /// </summary>
     public partial class ProfileView : UserControl
     {
-        private ProfileViewModel viewModel = new ProfileViewModel(); 
         public ProfileView()
         {
             InitializeComponent();

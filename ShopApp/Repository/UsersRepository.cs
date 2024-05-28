@@ -1,7 +1,9 @@
 ﻿using ShopApp.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -88,11 +90,27 @@ namespace ShopApp.Repository
             }
         }
 
-        public string getName(int userId)
+        public bool EmailTaken(string Email)
+        {
+            bool emailfound = false;
+            List<string> allEmails = new List<string>();
+            using (var context = new DataContext())
+            {
+                allEmails.AddRange(context.client.Select(c => c.Email));
+                allEmails.AddRange(context.administrator.Select(a => a.Email));
+
+                emailfound= allEmails.Contains(Email);
+
+            }
+            return emailfound;
+        }
+
+        public void AddUser(Client client)
         {
             using (var context = new DataContext())
-            { 
-                return context.client.Find(userId).Name;
+            {
+                context.client.Add(client);
+                context.SaveChanges();
             }
         }
 

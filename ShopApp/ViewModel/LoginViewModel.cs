@@ -21,6 +21,8 @@ namespace ShopApp.ViewModel
         private string _password;
         private string _errorMessage;
 
+        private UsersRepository usersRepository = new UsersRepository();
+
 
         public string Email
         {
@@ -66,14 +68,14 @@ namespace ShopApp.ViewModel
 
         private void Login(object parameter)
         {
-            var repository = new UsersRepository();
+            
             try
             {
                 if (CanLogin())
                 {
-                    if (repository.UserExist(Email, Password))
+                    if (usersRepository.UserExist(Email, Password))
                     {
-                        var user = repository.GetUserDetails(Email);
+                        var user = usersRepository.GetUserDetails(Email);
                         if (user is Client client)
                         {
                             UserSession.Instance.SetClient(client);

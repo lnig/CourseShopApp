@@ -8,14 +8,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace ShopApp.ViewModel
 {
-    public class ProfileViewModel
+    public class ProfileViewModel : INotifyPropertyChanged
     {
         public string Title { get; } = "Profile";
+
+        private UsersRepository usersRepository = new UsersRepository();
+
 
         private string _userName;
         private string _userSurname;
@@ -27,6 +31,8 @@ namespace ShopApp.ViewModel
         private string _tempSurname;
         private string _tempEmail;
         private string _tempPassword;
+        private string _errorMessage;
+        
         public string Name
         {
             get => _userName;
@@ -112,6 +118,15 @@ namespace ShopApp.ViewModel
                 OnPropertyChanged();
             }
         }
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                _errorMessage = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand SaveCommand { get; }
 
@@ -125,35 +140,58 @@ namespace ShopApp.ViewModel
 
             SaveCommand = new RelayCommand(SaveInformation);
         }
+
+        private bool CanChange()
+        {
+            return !string.IsNullOrEmpty(TempName) && !string.IsNullOrEmpty(TempSurname) &&
+                   !string.IsNullOrEmpty(TempEmail) && !string.IsNullOrEmpty(TempPassword);
+        }
+
+        private void SaveInformation(object parameter)
+        {
+            try
+            {
+                if (CanChange())
+                {
+           
+                    if (!usersRepository.EmailTaken(TempEmail))
+                    {
+                  
+                        UserSession.Instance.Name = TempName;
+                        UserSession.Instance.Surname = TempSurname;
+                        UserSession.Instance.Email = TempEmail;
+                        UserSession.Instance.Password = TempPassword;
+
+                        Name = TempName;
+                        Surname = TempSurname;
+                        Email = TempEmail;
+                        Password = TempPassword;
+
+                        usersRepository.UpdateUser(UserSession.Instance);
+              
+                    }
+                    else
+                    {
+                        ErrorMessage = "The provided email address is already taken.";
+                    }
+                }
+                else
+                {
+                    ErrorMessage = "Fill.";
+                }
+            }catch(Exception ex)
+            {
+               Console.WriteLine(ex.ToString());
+            }
+           
+        }
+
         public void UpdatePassword(object parameter)
         {
             if (parameter is PasswordBox passwordBox)
             {
                 TempPassword = passwordBox.Password;
             }
-        }
-
-        private void SaveInformation(object parameter)
-        {
-            UserSession.Instance.Name = TempName;
-            UserSession.Instance.Surname = TempSurname;
-            UserSession.Instance.Email = TempEmail;
-            UserSession.Instance.Password = TempPassword;
-
-            Name = TempName;
-            Surname = TempSurname;
-            Email = TempEmail;
-            Password = TempPassword;
-
-            var userRepository = new UsersRepository();
-            userRepository.UpdateUser(UserSession.Instance);
-        }
-
-
-        public string GetUserName()
-        {
-            var userRepository = new UsersRepository();
-            return userRepository.getName(UserSession.Instance.UserId);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

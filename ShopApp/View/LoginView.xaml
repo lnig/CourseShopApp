@@ -77,7 +77,7 @@
                     </Grid>
                 </Border>
 
-                <Label FontSize="10"  Margin="70 0" Foreground="#EB4C60" x:Name="errorMessage" Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisibilityConverter}}" Content="{Binding ErrorMessage}"/>
+                <Label FontSize="10"  Margin="70 0" Foreground="#EB4C60" x:Name="errorMessage" Content="{Binding ErrorMessage}"/>
 
                 <Button Content="Sign In" Style="{StaticResource buttonSignIn}" Command="{Binding LoginCommand}" Margin="0 20 0 10"/>
 

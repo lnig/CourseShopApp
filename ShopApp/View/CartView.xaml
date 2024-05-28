@@ -234,7 +234,7 @@
 
                 </StackPanel>
 
-                <Button Content="Proceed to Payment" Height="44" Margin="0 40 0 0"/>
+                <Button Content="Proceed to Payment" Height="44" Margin="0 40 0 0" Command="{Binding RegisterCommand}"/>
             </StackPanel>
 
 
