@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace ShopApp.View
 {
-    /// <summary>
-    /// Logika interakcji dla klasy HomeView.xaml
-    /// </summary>
     public partial class HomeView : UserControl
     {
         public HomeViewModel homeViewModel = new HomeViewModel();
@@ -29,14 +26,22 @@ namespace ShopApp.View
         public HomeView()
         {
             InitializeComponent();
-            
+            DataContext = new HomeViewModel();
+
             homeViewModel.FilterAndSortByOwnState();
             coursesItemsControl0.ItemsSource = homeViewModel.GetDividedByColumns(3, 0);
             coursesItemsControl1.ItemsSource = homeViewModel.GetDividedByColumns(3, 1);
             coursesItemsControl2.ItemsSource = homeViewModel.GetDividedByColumns(3, 2);
-            DataContext = homeViewModel;
             FountProductCount.Text=homeViewModel.processedCoursesCount.ToString();
 
+        }
+
+        private void ShowMessageBox(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is HomeViewModel viewModel)
+            {
+                viewModel.ShowDetailsCommand.Execute(this);
+            }
         }
 
         private void textSearch_MouseDown(object sender, MouseButtonEventArgs e)

@@ -168,7 +168,7 @@ namespace ShopApp.ViewModel
                         Password = TempPassword;
 
                         usersRepository.UpdateUser(UserSession.Instance);
-              
+                        
                     }
                     else
                     {

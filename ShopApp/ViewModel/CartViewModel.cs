@@ -18,25 +18,5 @@ namespace ShopApp.ViewModel
     {
         public string Title { get; } = "Cart";
 
-        public ICommand RegisterCommand { get; }
-
-        public CartViewModel()
-        {
-            RegisterCommand = new RelayCommand(Register);
-        }
-
-        private void Register(object parameter)
-        {
-            MessageBox.Show("2");
-        }
-
-   
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
     }
 }

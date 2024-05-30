@@ -32,6 +32,8 @@ namespace ShopApp.View
             FirstNameTextBox.Text = string.Empty;
             LastNameTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
+
+    
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)

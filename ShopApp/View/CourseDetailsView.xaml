@@ -9,11 +9,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1184">
 
-    <UserControl.DataContext>
-        <vm:CourseDetailsViewModel/>
-    </UserControl.DataContext>
-
     <Grid Background="White">
+
 
         <StackPanel Orientation="Vertical" Margin="30 40">
             <TextBlock Text="Programming Course - Full WPF Course" Foreground="#171A1F" FontSize="32" FontWeight="Bold" />

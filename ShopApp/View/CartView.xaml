@@ -9,10 +9,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1184">
 
-    <UserControl.DataContext>
-        <vm:CartViewModel/>
-    </UserControl.DataContext>
-
     <UserControl.Resources>
 
         <Style x:Key="HeaderStyle" TargetType="TextBlock">

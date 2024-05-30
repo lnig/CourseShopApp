@@ -1,99 +1,29 @@
 ﻿using MySqlX.XDevAPI.Relational;
+using Renci.SshNet.Messages;
 using ShopApp.Model;
+using ShopApp.Utils;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace ShopApp.ViewModel
 {
-    public class HomeViewModel
+    public class HomeViewModel : INotifyPropertyChanged
     {
         public string Title { get; } = "Home";
         public List<Course> testCourses;
 
-        public List<Course> rawCourses = new List<Course>
-        {
-            new Course(
-                    courseId: 0,
-                    categoryId: 1,
-                    title: "Introduction to Programming",
-                    author: "Alice Smith",
-                    description: "A beginner's course on programming.",
-                    shortDescription: "Learn programming basics.",
-                    prize: "49.99",
-                    imageTitle: "/Assets/Icons/programming.png",
-                    rating: 3.0f,
-                    isFavorite: false
+        public List<Course> rawCourses = new List<Course>();
 
-                ),
-                new Course(
-                    courseId: 1,
-                    categoryId: 2,
-                    title: "Advanced Data Structures",
-                    author: "Bob Johnson",
-                    description: "An in-depth look at data structures.",
-                    shortDescription: "Master complex data structures.",
-                    prize: "79.99",
-                    imageTitle: "/Assets/Icons/datastructures.png",
-                    rating: 4.0f,
-                    isFavorite: false
-                ),
-                new Course(
-                    courseId: 2,
-                    categoryId: 3,
-                    title: "Web Development Bootcamp",
-                    author: "Charlie Brown",
-                    description: "A comprehensive course on web development.",
-                    shortDescription: "Become a web developer.",
-                    prize: "99.99",
-                    imageTitle: "/Assets/Icons/webdev.png",
-                    rating: 5.0f,
-                    isFavorite: true
-                )
-        };
-        public List<Course> processedCourses = new List<Course>
-        {
-            new Course(
-                    courseId: 0,
-                    categoryId: 1,
-                    title: "Introduction to Programming",
-                    author: "Alice Smith",
-                    description: "A beginner's course on programming.",
-                    shortDescription: "Learn programming basics.",
-                    prize: "49.99",
-                    imageTitle: "/Assets/Icons/programming.png",
-                    rating: 3.0f,
-                    isFavorite: false
-
-                ),
-                new Course(
-                    courseId: 1,
-                    categoryId: 2,
-                    title: "Advanced Data Structures",
-                    author: "Bob Johnson",
-                    description: "An in-depth look at data structures.",
-                    shortDescription: "Master complex data structures.",
-                    prize: "79.99",
-                    imageTitle: "/Assets/Icons/datastructures.png",
-                    rating: 4.0f,
-                    isFavorite: false
-                ),
-                new Course(
-                    courseId: 2,
-                    categoryId: 3,
-                    title: "Web Development Bootcamp",
-                    author: "Charlie Brown",
-                    description: "A comprehensive course on web development.",
-                    shortDescription: "Become a web developer.",
-                    prize: "99.99",
-                    imageTitle: "/Assets/Icons/webdev.png",
-                    rating: 5.0f,
-                    isFavorite: true
-                )
-        };
+        public List<Course> processedCourses = new List<Course>();
+        
         public int processedCoursesCount = 3;
 
         public decimal filterByPriceFrom = 0;
@@ -108,6 +38,8 @@ namespace ShopApp.ViewModel
 
         public string sortByField = null;
 
+        public ICommand ShowDetailsCommand { get; private set; }
+
         public HomeViewModel()
         {
             using (var context = new DataContext())
@@ -115,10 +47,17 @@ namespace ShopApp.ViewModel
                 
                 rawCourses = context.course.ToList();
                 processedCourses = rawCourses.ToList();
-                processedCoursesCount = processedCourses.Count; 
-
+                processedCoursesCount = processedCourses.Count;
+                ShowDetailsCommand = new RelayCommand<int>(ShowDetails);
             }
         }
+
+        private void ShowDetails(int courseId)
+        {
+            MessageBox.Show($"Course ID: {courseId}");
+
+        }
+
         public void TryToRemoveToFilterByRating(int rating)
         {
             if (filterByRating.Contains(rating))
@@ -220,6 +159,40 @@ namespace ShopApp.ViewModel
                     throw new ArgumentException("Nieprawidłowe pole sortowania.");
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
     }
-    
+
+    public class RelayCommand<T> : ICommand
+    {
+        private readonly Action<T> execute;
+        private readonly Func<T, bool> canExecute;
+
+        public RelayCommand(Action<T> execute, Func<T, bool> canExecute = null)
+        {
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return canExecute == null || canExecute((T)parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            execute((T)parameter);
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+    }
 }
