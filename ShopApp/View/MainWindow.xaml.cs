@@ -26,12 +26,12 @@ namespace ShopApp.View
         {
             InitializeComponent();
             MainContent.Content = new HomeView();
+            ButtonHome.FontWeight = FontWeights.Bold;
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
-
         }
 
         private void ListBox_Content_MouseDown(object sender, MouseButtonEventArgs e)
@@ -42,19 +42,58 @@ namespace ShopApp.View
             }
         }
 
-        private void NavigateToView1(object sender, RoutedEventArgs e)
+        private void NavigateToHome(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new CourseDetailsView();
+            MainContent.Content = new HomeView();
+            ButtonHome.FontWeight = FontWeights.Bold;
+            ButtonCart.FontWeight = FontWeights.Regular;
+            ButtonProfile.FontWeight = FontWeights.Regular;
         }
 
-        private void NavigateToView2(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new ProfileView();
-        }
-
-        private void NavigateToView3(object sender, RoutedEventArgs e)
+        private void NavigateToCart(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new CartView();
+            ButtonHome.FontWeight = FontWeights.Regular;
+            ButtonCart.FontWeight = FontWeights.Bold;
+            ButtonProfile.FontWeight = FontWeights.Regular;
+        }
+
+        private void NavigateToProfile(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ProfileView();
+            ButtonHome.FontWeight = FontWeights.Regular;
+            ButtonCart.FontWeight = FontWeights.Regular;
+            ButtonProfile.FontWeight = FontWeights.Bold;
+        }
+
+        private void ButtonHome_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonHome.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
+        }
+
+        private void ButtonHome_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ButtonHome.Background = new SolidColorBrush(Colors.Transparent);
+        }
+
+        private void ButtonCart_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonCart.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
+        }
+
+        private void ButtonCart_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ButtonCart.Background = new SolidColorBrush(Colors.Transparent);
+        }
+
+        private void ButtonProfile_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonProfile.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
+        }
+
+        private void ButtonProfile_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ButtonProfile.Background = new SolidColorBrush(Colors.Transparent);
         }
 
     }
