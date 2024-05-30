@@ -11,7 +11,6 @@
         WindowStyle="None" ResizeMode="NoResize">
 
     <Window.Resources>
-
         <Style x:Key="navButton" TargetType="Button">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>

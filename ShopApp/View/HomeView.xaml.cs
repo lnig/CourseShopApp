@@ -32,7 +32,7 @@ namespace ShopApp.View
             coursesItemsControl0.ItemsSource = homeViewModel.GetDividedByColumns(3, 0);
             coursesItemsControl1.ItemsSource = homeViewModel.GetDividedByColumns(3, 1);
             coursesItemsControl2.ItemsSource = homeViewModel.GetDividedByColumns(3, 2);
-            FountProductCount.Text=homeViewModel.processedCoursesCount.ToString();
+            FountProductCount.Text = homeViewModel.processedCoursesCount.ToString();
 
         }
 

@@ -10,6 +10,24 @@
              d:DesignHeight="900" d:DesignWidth="1184">
 
     <UserControl.Resources>
+
+
+        <Style x:Key="navButton" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <DataTemplate x:Key="CourseTemplate">
             <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
                 <Image Source="/Assets/Illustrations/programming.jpg"/>
@@ -27,12 +45,19 @@
                     </StackPanel>
                 </DockPanel>
                 <DockPanel LastChildFill="False" Margin="16 4">
-                    <Button Content="More Details" DockPanel.Dock="Left" Padding="16 4" Command="{Binding DataContext.ShowDetailsCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding CourseId}"/>
-                    <Button Width="32" DockPanel.Dock="Right">
-                        <StackPanel>
-                            <Image Source="/Assets/Icons/close.png" />
-                        </StackPanel>
-                    </Button>
+                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4" DockPanel.Dock="Left">
+                        <Button Content="More Details" Width="192" Command="{Binding DataContext.ShowDetailsCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding CourseId}"
+                        Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource navButton}">
+                        </Button>
+                    </Border>
+                    <Border CornerRadius="4" Background="Black" DockPanel.Dock="Right">
+                        <Button Style="{StaticResource navButton}" Width="32" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" 
+                                Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding CourseId}">
+                            <StackPanel>
+                                <Image Source="/Assets/Icons/close.png"/>
+                            </StackPanel>
+                        </Button>
+                    </Border>
                 </DockPanel>
             </StackPanel>
         </DataTemplate>

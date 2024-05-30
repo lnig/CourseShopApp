@@ -16,15 +16,22 @@ using ShopApp.Model;
 using ShopApp.ViewModel;
 
 namespace ShopApp.View
-{
-    /// <summary>
-    /// Logika interakcji dla klasy CourseDetailsView.xaml
-    /// </summary>
+{ 
     public partial class CourseDetailsView : UserControl
     {
         public CourseDetailsView()
         {
             InitializeComponent();
         }
+
+        private void BackToCourses_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mainWindow != null)
+            {
+                mainWindow.MainContent.Content = new HomeView();
+            }
+        }
+
     }
 }

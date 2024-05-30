@@ -1,17 +1,14 @@
-﻿using MySqlX.XDevAPI.Relational;
-using Renci.SshNet.Messages;
-using ShopApp.Model;
-using ShopApp.Utils;
+﻿using ShopApp.Model;
+using ShopApp.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+
 
 namespace ShopApp.ViewModel
 {
@@ -38,7 +35,21 @@ namespace ShopApp.ViewModel
 
         public string sortByField = null;
 
+        private Course _selectedCourse;
+
+        public Course SelectedCourse
+        {
+            get { return _selectedCourse; }
+            set
+            {
+                _selectedCourse = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand ShowDetailsCommand { get; private set; }
+
+        public ICommand AddToCartCommand { get; private set; }
 
         public HomeViewModel()
         {
@@ -49,13 +60,36 @@ namespace ShopApp.ViewModel
                 processedCourses = rawCourses.ToList();
                 processedCoursesCount = processedCourses.Count;
                 ShowDetailsCommand = new RelayCommand<int>(ShowDetails);
+                AddToCartCommand = new RelayCommand<int>(AddToCart);
             }
         }
 
         private void ShowDetails(int courseId)
         {
-            MessageBox.Show($"Course ID: {courseId}");
+            SelectedCourse = rawCourses.FirstOrDefault(c => c.CourseId == courseId);
+            if (SelectedCourse != null)
+            {
+                NavigateToDetailsView();
+            }
+        }
 
+        private void AddToCart(int courseId)
+        {
+            SelectedCourse = rawCourses.FirstOrDefault(c => c.CourseId == courseId);
+            if (SelectedCourse != null)
+            {
+                MessageBox.Show("Cart");
+            }
+        }
+
+
+        private void NavigateToDetailsView()
+        {
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mainWindow != null)
+            {
+                mainWindow.MainContent.Content = new CourseDetailsView { DataContext = this };
+            }
         }
 
         public void TryToRemoveToFilterByRating(int rating)
