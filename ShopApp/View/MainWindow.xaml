@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopApp.ViewModel"
         xmlns:views="clr-namespace:ShopApp.View"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
         Height="900" Width="1440" Background="White"
         Title="Nav" WindowStartupLocation="CenterScreen"
@@ -45,21 +46,21 @@
 
                 <Button x:Name="ButtonHome" Style="{StaticResource navButton}" Height="48" Background="White" BorderThickness="0" HorizontalAlignment="Left" Click="NavigateToHome" MouseEnter="ButtonHome_MouseEnter" MouseLeave="ButtonHome_MouseLeave">
                     <StackPanel Orientation="Horizontal" Width="224">
-                        <Image Source="/Assets/Icons/close.png" Height="28" VerticalAlignment="Center" Margin="16 0 0 0"/>
+                        <Image Source="/Assets/Icons/Img/home.png" Height="28" VerticalAlignment="Center" Margin="16 0 0 0"/>
                         <TextBlock Text="Home" FontSize="16" VerticalAlignment="Center" Padding="8 0 0 0"/>
                     </StackPanel>
                 </Button>
                 
                 <Button x:Name="ButtonCart" Style="{StaticResource navButton}" Height="48" Background="White" BorderThickness="0" HorizontalAlignment="Left" Click="NavigateToCart" MouseEnter="ButtonCart_MouseEnter" MouseLeave="ButtonCart_MouseLeave">
                     <StackPanel Orientation="Horizontal" Width="224">
-                        <Image Source="/Assets/Icons/close.png" Height="28" Margin="16 0 0 0"/>
+                        <Image Source="/Assets/Icons/Img/cart.png" Height="28" Margin="16 0 0 0"/>
                         <TextBlock Text="Cart" FontSize="16" VerticalAlignment="Center" Padding="8 0 0 0"/>
                     </StackPanel>
                 </Button>
 
                 <Button x:Name="ButtonProfile" Style="{StaticResource navButton}" Height="48" Margin="0 564 0 0" Background="White" BorderThickness="0" HorizontalAlignment="Left" Click="NavigateToProfile" MouseEnter="ButtonProfile_MouseEnter" MouseLeave="ButtonProfile_MouseLeave">
                     <StackPanel Orientation="Horizontal" Width="224">
-                        <Image Source="/Assets/Icons/close.png" Margin="16 0 0 0"/>
+                        <Image Source="/Assets/Icons/Img/account.png" Margin="16 0 0 0"/>
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                             <TextBlock Text="Profile" FontSize="16" VerticalAlignment="Center" Margin="8 0 0 0"/>
                             <TextBlock Text="View Profile" FontSize="12" Margin="8 0 0 0"/>
@@ -70,7 +71,7 @@
         </Border>
 
 
-        <Image Source="/Assets/Icons/close.png" Grid.Column="1" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}" Margin="0 16 12 0"/>
+        <Image Source="/Assets/Icons/Img/close.png" Grid.Column="1" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}" Margin="0 16 12 0"/>
 
         <ContentControl x:Name="MainContent" Grid.Column="1" MouseDown="ListBox_Content_MouseDown"/>
 

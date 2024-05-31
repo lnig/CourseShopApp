@@ -21,10 +21,11 @@ namespace ShopApp.View
     /// </summary>
     public partial class CartView : UserControl
     {
+        public CartViewModel cartViewModel = new CartViewModel();
         public CartView()
         {
             InitializeComponent();
-            DataContext = new CartViewModel();
+            coursesItemsControl.ItemsSource = cartViewModel.UserCoursesInCart;
         }
     }
 }

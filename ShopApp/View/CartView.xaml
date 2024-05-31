@@ -9,8 +9,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1184">
 
+    <UserControl.DataContext>
+        <vm:CartViewModel/>
+    </UserControl.DataContext>
+    
     <UserControl.Resources>
-
         <Style x:Key="HeaderStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -18,7 +21,11 @@
             <Setter Property="Foreground" Value="#171A1F"/>
         </Style>
 
-
+        <DataTemplate x:Key="CourseTemplate">
+            <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
+                <TextBlock Text="{Binding Title}"/>
+            </StackPanel>
+        </DataTemplate>
     </UserControl.Resources>
 
     <Grid Background="White">
@@ -28,30 +35,32 @@
             <ColumnDefinition Width="360"/>
         </Grid.ColumnDefinitions>
 
-
         <StackPanel Grid.Column="0" Margin="8,8,8,8">
 
-            <Label Content="Your Cart" FontSize="24" Margin="20 0 0 12" FontWeight="Bold"></Label>
+            <Label Content="Your Cart" FontSize="24" Margin="20 0 0 12" FontWeight="Bold"/>
+
+            <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
+                <TextBlock Text="{Binding Title}"/>
+            </StackPanel>
 
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="808">
                 <StackPanel Orientation="Vertical" Margin="12 6 0 0">
                     <StackPanel Orientation="Horizontal" Background="#FFFFFF" >
-                        <!--
-                        <svgc:SvgViewbox Source="C:\Users\dmier\Desktop\WPF\ShopApp\Assets\Icons\cart.svg"/>
-                        -->
                         <TextBlock Text="Order Summary" Style="{StaticResource HeaderStyle}" Height="24" Margin="10 4" Foreground="#171A1F"/>
                     </StackPanel>
 
-                    <ListView Margin="12 12 24 12">
+                    <ItemsControl x:Name="coursesItemsControl" ItemTemplate="{StaticResource CourseTemplate}" />
+
+                    <ListView ItemsSource="{Binding UserCoursesInCart}">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Name" Width="140"/>
-                                <GridViewColumn Header="Price" Width="60"/>
-                                <GridViewColumn Header="Quantity" Width="80"/>
-                                <GridViewColumn Header="Total" Width="80"/>
+                                <GridViewColumn Header="Course Title" DisplayMemberBinding="{Binding Title}" />
+                                <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
+                                <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Prize}" />
                             </GridView>
                         </ListView.View>
                     </ListView>
+
                 </StackPanel>
             </Border>
 
@@ -230,7 +239,7 @@
 
                 </StackPanel>
 
-                <Button Content="Proceed to Payment" Height="44" Margin="0 40 0 0" Command="{Binding RegisterCommand}"/>
+                <Button Content="Proceed to Payment" Height="44" Margin="0 40 0 0"/>
             </StackPanel>
 
 

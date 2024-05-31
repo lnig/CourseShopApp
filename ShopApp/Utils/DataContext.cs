@@ -14,6 +14,7 @@ namespace ShopApp
         public DbSet<Client> client { get; set; }
         public DbSet<Category> category { get; set; }
         public DbSet<Course> course { get; set; }
+        public DbSet<Cart> cart { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,6 +25,8 @@ namespace ShopApp
         {
             modelBuilder.Entity<Client>().HasKey(c => c.Id);
             modelBuilder.Entity<Administrator>().HasKey(a => a.Id);
+            modelBuilder.Entity<Cart>().HasKey(c => c.CartId);
+
         }
 
     }

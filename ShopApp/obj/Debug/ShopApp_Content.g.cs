@@ -8,15 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/account.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/cart.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/credit_card.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/delivery.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/password.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/email.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/payment.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/user.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/account.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/cart.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/credit_card.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/delivery.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/password.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/email.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/payment.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/icons/svg/user.svg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/illustrations/background.svg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/illustrations/login.svg")]
 
 

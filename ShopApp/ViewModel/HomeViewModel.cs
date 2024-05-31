@@ -1,4 +1,5 @@
 ﻿using ShopApp.Model;
+using ShopApp.Repository;
 using ShopApp.View;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,13 @@ using System.Windows.Input;
 namespace ShopApp.ViewModel
 {
     public class HomeViewModel : INotifyPropertyChanged
-    {
-        public string Title { get; } = "Home";
+    { 
+        private int userId;
+
+        private CartRepository cartRepository = new CartRepository();
+        private UsersRepository usersRepository = new UsersRepository();
+
+
         public List<Course> testCourses;
 
         public List<Course> rawCourses = new List<Course>();
@@ -53,6 +59,7 @@ namespace ShopApp.ViewModel
 
         public HomeViewModel()
         {
+            userId = UserSession.Instance.UserId;
             using (var context = new DataContext())
             {
                 
@@ -66,6 +73,7 @@ namespace ShopApp.ViewModel
 
         private void ShowDetails(int courseId)
         {
+          
             SelectedCourse = rawCourses.FirstOrDefault(c => c.CourseId == courseId);
             if (SelectedCourse != null)
             {
@@ -78,7 +86,8 @@ namespace ShopApp.ViewModel
             SelectedCourse = rawCourses.FirstOrDefault(c => c.CourseId == courseId);
             if (SelectedCourse != null)
             {
-                MessageBox.Show("Cart");
+                Cart cart = new Cart(userId, SelectedCourse.CourseId);
+                cartRepository.AddToCart(cart);
             }
         }
 

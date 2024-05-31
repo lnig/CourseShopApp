@@ -10,24 +10,6 @@
              d:DesignHeight="900" d:DesignWidth="1184">
 
     <UserControl.Resources>
-
-
-        <Style x:Key="navButton" TargetType="Button">
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
         <DataTemplate x:Key="CourseTemplate">
             <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
                 <Image Source="/Assets/Illustrations/programming.jpg"/>
@@ -40,21 +22,21 @@
                         <TextBlock Text="{Binding Prize}" FontSize="24" FontWeight="ExtraBold"/>
                     </StackPanel>
                     <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
-                        <TextBlock Text="4.5" DockPanel.Dock="Right" FontSize="20" VerticalAlignment="Center"/>
-                        <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="4 0 0 0" DockPanel.Dock="Right"/>
+                        <TextBlock Text="{Binding Rating}" DockPanel.Dock="Right" FontSize="20" VerticalAlignment="Center"/>
+                        <Image Source="/Assets/Icons/Img/star.png" Height="20" Width="20" Margin="4 0 0 0" DockPanel.Dock="Right"/>
                     </StackPanel>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Margin="16 4">
+                <DockPanel LastChildFill="False" Margin="16 4 16 16">
                     <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4" DockPanel.Dock="Left">
                         <Button Content="More Details" Width="192" Command="{Binding DataContext.ShowDetailsCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding CourseId}"
                         Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource navButton}">
                         </Button>
                     </Border>
-                    <Border CornerRadius="4" Background="Black" DockPanel.Dock="Right">
+                    <Border CornerRadius="4" Background="Black" DockPanel.Dock="Right" Height="32">
                         <Button Style="{StaticResource navButton}" Width="32" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" 
                                 Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding CourseId}">
                             <StackPanel>
-                                <Image Source="/Assets/Icons/close.png"/>
+                                <Image Source="/Assets/Icons/Img/add_to_cart.png" Height="18"/>
                             </StackPanel>
                         </Button>
                     </Border>
@@ -178,56 +160,56 @@
                             <TextBlock Text="Rating" FontSize="16" FontWeight="Bold" Margin="0 0 0 8"/>
                             <StackPanel Orientation="Horizontal" Height="30">
                                 <CheckBox x:Name="Rating5Star" Height="15" Margin="0 0 8 0" Checked="Rating5Star_Checked" Unchecked="Rating5Star_Unchecked" IsChecked="True"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <CheckBox x:Name="Rating4Star" Height="15" Margin="0 0 8 0" Checked="Rating4Star_Checked" Unchecked="Rating4Star_Unchecked" IsChecked="True"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <CheckBox x:Name="Rating3Star" Height="15" Margin="0 0 8 0" Checked="Rating3Star_Checked" Unchecked="Rating3Star_Unchecked" IsChecked="True"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <CheckBox x:Name="Rating2Star" Height="15" Margin="0 0 8 0" Checked="Rating2Star_Checked" Unchecked="Rating2Star_Unchecked" IsChecked="True"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <CheckBox x:Name="Rating1Star" Height="15" Margin="0 0 8 0" Checked="Rating1Star_Checked" Unchecked="Rating1Star_Unchecked" IsChecked="True"/>
-                                <Image Source="/Assets/Icons/star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/Img/star.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <CheckBox x:Name="Rating0Star" Height="15" Margin="0 0 8 0" Checked="Rating0Star_Checked" Unchecked="Rating0Star_Unchecked" IsChecked="True"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
-                                <Image Source="/Assets/Icons/empty_star.bmp" Height="20" Width="20" Margin="0 0 0 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
+                                <Image Source="/Assets/Icons/Img/star_empty.png" Height="16" Width="16" Margin="0 0 4 3"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>

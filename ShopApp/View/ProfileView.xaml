@@ -16,7 +16,10 @@
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="312">
                 <StackPanel Orientation="Vertical" Margin="0 24">
                     <StackPanel Orientation="Vertical" Background="#FFFFFF" >
-                        <TextBlock x:Name="TextName" Text="{Binding Name}" FontSize="20" FontWeight="SemiBold" Foreground="#171A1F" HorizontalAlignment="Center" Margin="18 12 18 8" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="18 12 18 8">
+                            <TextBlock x:Name="TextName" Text="{Binding Name}" FontSize="20" FontWeight="SemiBold" Margin="0 0 4 0" Foreground="#171A1F"/>
+                            <TextBlock x:Name="TextSurName" Text="{Binding Surname}" FontSize="20" FontWeight="SemiBold" Foreground="#171A1F"/>
+                        </StackPanel>
                         <TextBlock x:Name="TextEmail" Text="{Binding Email}" HorizontalAlignment="Center" FontSize="14" Margin="18 0"/>
                         <Separator Height="1" Margin="18 18"/>
                         <TextBlock Text="Bio bioBio bioBio bioBio bioBio bioBio bioBio bioBio bioBio bioBio bioBio bioBio bioBio bio" TextWrapping="Wrap" Margin="18 4" />

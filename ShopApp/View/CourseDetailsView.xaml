@@ -10,10 +10,13 @@
              d:DesignHeight="900" d:DesignWidth="1184">
 
     <Grid Background="White">
-        <StackPanel Orientation="Vertical" Margin="30 40">
-            <Border BorderThickness="1" CornerRadius="100" Width="48" Height="48" BorderBrush="Red" HorizontalAlignment="Left">
-                <Button Content="Back to Courses" Click="BackToCourses_Click" Background="Transparent" BorderBrush="Transparent"/>
+        <StackPanel Orientation="Vertical" Margin="30 32 30 24">
+            <Border HorizontalAlignment="Left" CornerRadius="50" Background="Transparent" Height="32" Width="32" BorderBrush="LightGray" BorderThickness="1">
+                <Button Style="{StaticResource navButton}" Width="32" Background="Transparent" BorderBrush="Transparent" Click="BackToCourses_Click">
+                    <Image Source="/Assets/Icons/Img/arrow_back.png" Height="18"/>
+                </Button>
             </Border>
+
             <TextBlock Text="{Binding SelectedCourse.Title}" Foreground="#171A1F" FontSize="32" FontWeight="Bold" />
 
             <StackPanel Orientation="Horizontal" Margin="0 12 0 0">
@@ -50,7 +53,7 @@
 
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Column="1" Margin="12 0">
                             <TextBlock Text="{Binding SelectedCourse.Rating}" VerticalAlignment="Center" FontSize="14" Foreground="#171A1F"/>
-                            <Image Source="/Assets/Icons/star.bmp" Height="14" VerticalAlignment="Center"/>
+                            <Image Source="/Assets/Icons/Img/star.png" Height="14" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Grid>
 
@@ -61,11 +64,18 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Price" HorizontalAlignment="Left" FontSize="16" FontWeight="SemiBold"/>
-                            <TextBlock Text="{Binding SelectedCourse.Prize}" Grid.Column="1" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold"/>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock Text="$" Grid.Column="1" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold" Margin="0 0 4 0 "/>
+                                <TextBlock Text="{Binding SelectedCourse.Prize}" Grid.Column="1" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold"/>
+                            </StackPanel>
+                            
                         </Grid>
 
                         <Separator Height="1" Background="#EAECF0" Margin="12 4 12 4"/>
-                        <Button Content="Add To Cart" Height="35" Margin="12 20 12 0"/>
+                        <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4" DockPanel.Dock="Left" Height="35" Margin="12 20 12 0">
+                            <Button Content="Add To Cart" Width="192" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource navButton}">
+                            </Button>
+                        </Border>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

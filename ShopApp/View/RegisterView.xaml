@@ -16,7 +16,7 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="/Assets/Icons/close.png" Grid.Column="2" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}" Height="30" Width="30"/>
+        <Image Source="/Assets/Icons/Img/close.png" Grid.Column="2" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}" Height="30" Width="30"/>
 
         <Border Background="#FFFFFE" MouseDown="Border_MouseDown">
             <StackPanel Margin="0 30 0 0">
@@ -89,17 +89,17 @@
 
                 <Button Content="Sign Up" Style="{StaticResource buttonSignIn}" Margin="0 10 0 10" Command="{Binding RegisterCommand}"/>
 
-                <TextBlock Text="or sign in with " Style="{StaticResource normalText}" Margin="0 0 0 0" FontWeight="Regular" Foreground="#323743"/>
+                <TextBlock Text="or sign up with " Style="{StaticResource normalText}" Margin="0 0 0 0" FontWeight="Regular" Foreground="#323743"/>
 
                 <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center">
                     <Button Style="{StaticResource buttonCircle}">
-                        <Image Source="/Assets/Icons/facebook.png" Width="32" Height="32"/>
+                        <Image Source="/Assets/Icons/Img/facebook.png" Width="32" Height="32"/>
                     </Button>
                     <Button Style="{StaticResource buttonCircle}">
-                        <Image Source="/Assets/Icons/google.png" Width="32" Height="32"/>
+                        <Image Source="/Assets/Icons/Img/google.png" Width="32" Height="32"/>
                     </Button>
                     <Button Style="{StaticResource buttonCircle}">
-                        <Image Source="/Assets/Icons/twitter.png" Width="32" Height="32"/>
+                        <Image Source="/Assets/Icons/Img/twitter.png" Width="32" Height="32"/>
                     </Button>
                 </StackPanel>
 
