@@ -1,6 +1,7 @@
 ﻿using ShopApp.Model;
 using ShopApp.Repository;
 using ShopApp.Utils;
+using ShopApp.View;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -58,6 +59,8 @@ namespace ShopApp.ViewModel
                 {
                     window.DialogResult = result;
                     window.Close();
+                    var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+                    mainWindow.Opacity = 1;
                 }
             }
         }

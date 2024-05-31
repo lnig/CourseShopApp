@@ -42,7 +42,7 @@ namespace ShopApp.ViewModel
            LoadAllCourses();
            DeleteCourseCommand = new RelayCommand<int>(DeleteCourse);
            OpenAddCourseCommand = new RelayCommand(OpenAddCourse);
-            EditCourseCommand = new RelayCommand<int>(EditCourse);
+           EditCourseCommand = new RelayCommand<int>(EditCourse);
         }
 
         private void LoadAllCourses()
@@ -63,7 +63,18 @@ namespace ShopApp.ViewModel
 
         public void EditCourse(int courseId)
         {
-            MessageBox.Show("" + courseId);
+            var course = courseRepository.GetCourseById(courseId);
+            if (course != null)
+            {
+                var editCourseView = new EditCourseView();
+                var editCourseViewModel = new EditCourseViewModel(course);
+                editCourseView.DataContext = editCourseViewModel;
+
+                if (editCourseView.ShowDialog() == true)
+                {
+                    RefreshView();
+                }
+            }
         }
 
 
@@ -80,11 +91,13 @@ namespace ShopApp.ViewModel
         {
             var addCourseView = new AddCourseView();
             var addCourseViewModel = new AddCourseViewModel();
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
             addCourseView.DataContext = addCourseViewModel;
+            mainWindow.Opacity = 0.5;
 
             if (addCourseView.ShowDialog() == true)
             {
-                // Kurs zostanie dodany tylko jeśli wynik okna dialogowego to "true"
+                mainWindow.Opacity = 1;
                 RefreshView();
             }
         }

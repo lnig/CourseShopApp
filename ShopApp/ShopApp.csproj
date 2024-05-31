@@ -255,6 +255,7 @@
     <Compile Include="ViewModel\CartViewModel.cs" />
     <Compile Include="ViewModel\CourseDetailsViewModel.cs" />
     <Compile Include="ViewModel\CoursesListViewModel.cs" />
+    <Compile Include="ViewModel\EditCourseViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />

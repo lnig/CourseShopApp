@@ -40,5 +40,14 @@ namespace ShopApp.Repository
             }
         }
 
+        public void UpdateCourse(Course course)
+        {
+            var existingCourse = context.course.Find(course.CourseId);
+            if (existingCourse != null)
+            {
+                context.Entry(existingCourse).CurrentValues.SetValues(course);
+                context.SaveChanges();
+            }
+        }
     }
 }
