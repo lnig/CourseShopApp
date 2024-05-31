@@ -56,12 +56,12 @@
 
 
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="808">
-                <StackPanel Orientation="Vertical" Margin="12 6 0 0">
+                <StackPanel Orientation="Vertical" Margin="12 6 0 6">
                     <StackPanel Orientation="Horizontal" Background="#FFFFFF">
                         <TextBlock Text="Order Summary" Style="{StaticResource HeaderStyle}" Height="24" Margin="10 4" Foreground="#171A1F"/>
                     </StackPanel>
 
-                    <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" Height="302">
+                    <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" MaxHeight="302">
                         <StackPanel Margin="0 0 8 0">
                             <ItemsControl x:Name="coursesItemsControl" ItemTemplate="{StaticResource CourseTemplate}" />
                         </StackPanel>

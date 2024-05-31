@@ -47,6 +47,7 @@ namespace ShopApp.View
             MainContent.Content = new HomeView();
             ButtonHome.FontWeight = FontWeights.Bold;
             ButtonCart.FontWeight = FontWeights.Regular;
+            ButtonCourses.FontWeight = FontWeights.Regular;
             ButtonProfile.FontWeight = FontWeights.Regular;
         }
 
@@ -55,6 +56,16 @@ namespace ShopApp.View
             MainContent.Content = new CartView();
             ButtonHome.FontWeight = FontWeights.Regular;
             ButtonCart.FontWeight = FontWeights.Bold;
+            ButtonCourses.FontWeight = FontWeights.Regular;
+            ButtonProfile.FontWeight = FontWeights.Regular;
+        }
+
+        private void NavigateToCourses(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new CoursesListView();
+            ButtonHome.FontWeight = FontWeights.Regular;
+            ButtonCart.FontWeight = FontWeights.Regular;
+            ButtonCourses.FontWeight = FontWeights.Bold;
             ButtonProfile.FontWeight = FontWeights.Regular;
         }
 
@@ -63,6 +74,7 @@ namespace ShopApp.View
             MainContent.Content = new ProfileView();
             ButtonHome.FontWeight = FontWeights.Regular;
             ButtonCart.FontWeight = FontWeights.Regular;
+            ButtonCourses.FontWeight = FontWeights.Regular;
             ButtonProfile.FontWeight = FontWeights.Bold;
         }
 
@@ -84,6 +96,16 @@ namespace ShopApp.View
         private void ButtonCart_MouseLeave(object sender, MouseEventArgs e)
         {
             ButtonCart.Background = new SolidColorBrush(Colors.Transparent);
+        }
+
+        private void ButtonCourses_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonCourses.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
+        }
+
+        private void ButtonCourses_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ButtonCourses.Background = new SolidColorBrush(Colors.Transparent);
         }
 
         private void ButtonProfile_MouseEnter(object sender, MouseEventArgs e)

@@ -3,9 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:ShopApp.ViewModel"
         xmlns:local="clr-namespace:ShopApp.View"
         mc:Ignorable="d"
-        Title="AddCourseView" Height="850" Width="600">
+        Title="AddCourseView" Height="900" Width="440" Background="White"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize">
+    <Window.DataContext>
+        <vm:AddCourseViewModel/>
+    </Window.DataContext>
     <DockPanel>
         <WrapPanel DockPanel.Dock="Top">
             <TextBlock Text="Add course"
@@ -24,29 +30,28 @@
                     Padding="5"
                     Margin="5"
                     Background="Transparent">
-                <Button Click="Button_Click_1">
+                <Button>
                     <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="/Assets/Icons/defaultProductImage.png"/>
+                        <ImageBrush Stretch="Fill"/>
                     </Button.Background>
                 </Button>
             </Border>
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Title of course" FontSize="18" Margin="5 5 0 0" Foreground="#FF7D6BD9"/>
-                <TextBox HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
+                <TextBox Text="{Binding NewCourse.Title}" HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
                 <TextBlock Text="Author" FontSize="18" Margin="5 5 0 0" Foreground="#FF7D6BD9"/>
-                <TextBox HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
+                <TextBox Text="{Binding NewCourse.Author}" HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
                 <TextBlock Text="Price" FontSize="18" Margin="5 5 0 0" Foreground="#FF7D6BD9"/>
-                <TextBox HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
+                <TextBox Text="{Binding NewCourse.Prize}" HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
                 <TextBlock Text="Short Description" FontSize="18" Margin="5 5 0 0" Foreground="#FF7D6BD9"/>
-                <TextBox HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
+                <TextBox Text="{Binding NewCourse.ShortDescription}" HorizontalAlignment="Left" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
                 <TextBlock Text="Full Description" FontSize="18" Margin="5 5 0 0" Foreground="#FF7D6BD9"/>
-                <TextBox HorizontalAlignment="Left" Height="100" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
+                <TextBox Text="{Binding NewCourse.Description}" HorizontalAlignment="Left" Height="100" Width="400" Padding="5" Margin="5 0" Foreground="#FF7D6BD9"/>
             </StackPanel>
             <DockPanel HorizontalAlignment="Center">
-                <Button Content="Add Course" Style="{StaticResource buttonSignIn}" Margin="5 20 0 10"/>
-                <Button Content="Cancel" Style="{StaticResource buttonSignIn}" Margin="10 20 0 10" Background="LightPink"/>
+                <Button Content="Add Course" Command="{Binding AddCourseCommand}" Style="{StaticResource buttonSignIn}" Margin="5 20 0 10" IsDefault="True"/>
+                <Button Content="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource buttonSignIn}" Margin="10 20 0 10" Background="LightPink" IsCancel="True"/>
             </DockPanel>
         </StackPanel>
     </DockPanel>
-    
 </Window>

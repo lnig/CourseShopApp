@@ -251,8 +251,10 @@
     <Compile Include="Repository\UsersRepository.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\ViewModelBase.cs" />
+    <Compile Include="ViewModel\AddCourseViewModel.cs" />
     <Compile Include="ViewModel\CartViewModel.cs" />
     <Compile Include="ViewModel\CourseDetailsViewModel.cs" />
+    <Compile Include="ViewModel\CoursesListViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
@@ -268,6 +270,9 @@
     </Compile>
     <Compile Include="View\CourseDetailsView.xaml.cs">
       <DependentUpon>CourseDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CoursesListView.xaml.cs">
+      <DependentUpon>CoursesListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EditCourseView.xaml.cs">
       <DependentUpon>EditCourseView.xaml</DependentUpon>
@@ -300,6 +305,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CourseDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CoursesListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -369,6 +378,10 @@
   <ItemGroup>
     <Resource Include="Assets\Icons\Img\arrow_back.png" />
     <Resource Include="Assets\Icons\Img\remove.png" />
+    <Resource Include="Assets\Icons\Img\export.png" />
+    <Resource Include="Assets\Icons\Img\add.png" />
+    <Resource Include="Assets\Icons\Img\edit.png" />
+    <Resource Include="Assets\Icons\Img\products.png" />
     <Content Include="Assets\Icons\Svg\account.svg" />
     <Resource Include="Assets\Icons\Img\account.png" />
     <Content Include="Assets\Icons\Svg\cart.svg" />

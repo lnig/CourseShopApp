@@ -58,7 +58,14 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="ButtonProfile" Style="{StaticResource navButton}" Height="48" Margin="0 564 0 0" Background="White" BorderThickness="0" HorizontalAlignment="Left" Click="NavigateToProfile" MouseEnter="ButtonProfile_MouseEnter" MouseLeave="ButtonProfile_MouseLeave">
+                <Button x:Name="ButtonCourses" Style="{StaticResource navButton}" Height="48" Background="White" BorderThickness="0" HorizontalAlignment="Left" Click="NavigateToCourses" MouseEnter="ButtonCourses_MouseEnter" MouseLeave="ButtonCourses_MouseLeave">
+                    <StackPanel Orientation="Horizontal" Width="224">
+                        <Image Source="/Assets/Icons/Img/products.png" Height="28" Margin="16 0 0 0"/>
+                        <TextBlock Text="Courses" FontSize="16" VerticalAlignment="Center" Padding="8 0 0 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="ButtonProfile" Style="{StaticResource navButton}" Height="48" Margin="0 514 0 0" Background="White" BorderThickness="0" HorizontalAlignment="Left" Click="NavigateToProfile" MouseEnter="ButtonProfile_MouseEnter" MouseLeave="ButtonProfile_MouseLeave">
                     <StackPanel Orientation="Horizontal" Width="224">
                         <Image Source="/Assets/Icons/Img/account.png" Margin="16 0 0 0"/>
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center">

@@ -369,3 +369,5 @@ C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\ShopApp.exe
 C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\ShopApp.pdb
 C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\dmier\Desktop\WPF\ShopApp\bin\Debug\ExCSS.dll
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\View\CoursesListView.g.cs
+C:\Users\dmier\Desktop\WPF\ShopApp\obj\Debug\View\CoursesListView.baml

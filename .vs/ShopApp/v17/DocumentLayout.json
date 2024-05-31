@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\dmier\\Desktop\\WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\view\\addcourseview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\addcourseview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\view\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\viewmodel\\courseslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\viewmodel\\courseslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\viewmodel\\addcourseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\viewmodel\\addcourseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\view\\courseslistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\courseslistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\repository\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\repository\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\repository\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\repository\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\repository\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\repository\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\dmier\\Desktop\\WPF\\shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,20 +62,108 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ShopApp\\View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\MainWindow.xaml",
+              "RelativeToolTip": "ShopApp\\View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T21:35:47.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Repository\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "ShopApp\\Repository\\CourseRepository.cs",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Repository\\CourseRepository.cs",
+              "RelativeToolTip": "ShopApp\\Repository\\CourseRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T19:53:02.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Model\\Course.cs",
+              "RelativeDocumentMoniker": "ShopApp\\Model\\Course.cs",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Model\\Course.cs",
+              "RelativeToolTip": "ShopApp\\Model\\Course.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T19:34:43.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddCourseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\AddCourseViewModel.cs",
+              "RelativeDocumentMoniker": "ShopApp\\ViewModel\\AddCourseViewModel.cs",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\AddCourseViewModel.cs",
+              "RelativeToolTip": "ShopApp\\ViewModel\\AddCourseViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T19:31:23.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddCourseView.xaml",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\AddCourseView.xaml",
+              "RelativeDocumentMoniker": "ShopApp\\View\\AddCourseView.xaml",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\AddCourseView.xaml",
+              "RelativeToolTip": "ShopApp\\View\\AddCourseView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T19:25:40.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoursesListView.xaml",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\CoursesListView.xaml",
+              "RelativeDocumentMoniker": "ShopApp\\View\\CoursesListView.xaml",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\CoursesListView.xaml",
+              "RelativeToolTip": "ShopApp\\View\\CoursesListView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T19:20:40.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CoursesListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\CoursesListViewModel.cs",
+              "RelativeDocumentMoniker": "ShopApp\\ViewModel\\CoursesListViewModel.cs",
+              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\CoursesListViewModel.cs",
+              "RelativeToolTip": "ShopApp\\ViewModel\\CoursesListViewModel.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAswFkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T16:27:09.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "HomeView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\HomeView.xaml.cs",
               "RelativeDocumentMoniker": "ShopApp\\View\\HomeView.xaml.cs",
               "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\HomeView.xaml.cs",
               "RelativeToolTip": "ShopApp\\View\\HomeView.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAABBAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T00:34:47.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "HomeView.xaml",
               "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\HomeView.xaml",
               "RelativeDocumentMoniker": "ShopApp\\View\\HomeView.xaml",
@@ -75,70 +171,6 @@
               "RelativeToolTip": "ShopApp\\View\\HomeView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-30T22:47:51.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "ShopApp\\ViewModel\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\HomeViewModel.cs",
-              "RelativeToolTip": "ShopApp\\ViewModel\\HomeViewModel.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAowGQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T22:47:47.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartView.xaml",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\CartView.xaml",
-              "RelativeDocumentMoniker": "ShopApp\\View\\CartView.xaml",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\CartView.xaml",
-              "RelativeToolTip": "ShopApp\\View\\CartView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-30T18:51:21.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CartViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\CartViewModel.cs",
-              "RelativeDocumentMoniker": "ShopApp\\ViewModel\\CartViewModel.cs",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\CartViewModel.cs",
-              "RelativeToolTip": "ShopApp\\ViewModel\\CartViewModel.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAYwFAAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T18:48:58.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Repository\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "ShopApp\\Repository\\UsersRepository.cs",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Repository\\UsersRepository.cs",
-              "RelativeToolTip": "ShopApp\\Repository\\UsersRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T18:28:47.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CartRepository.cs",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Repository\\CartRepository.cs",
-              "RelativeDocumentMoniker": "ShopApp\\Repository\\CartRepository.cs",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Repository\\CartRepository.cs",
-              "RelativeToolTip": "ShopApp\\Repository\\CartRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAIAwwCYAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T18:27:31.539Z",
               "EditorCaption": ""
             }
           ]

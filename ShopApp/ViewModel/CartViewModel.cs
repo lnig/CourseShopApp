@@ -58,7 +58,7 @@ namespace ShopApp.ViewModel
 
             foreach (var cartItem in cartItems)
             {
-                var course = courseRepository.GetCourse(cartItem.CourseId);
+                var course = courseRepository.GetCourseById(cartItem.CourseId);
                 if (course != null)
                 {
                     UserCoursesInCart.Add(course);
