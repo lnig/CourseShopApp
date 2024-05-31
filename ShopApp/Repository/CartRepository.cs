@@ -34,5 +34,15 @@ namespace ShopApp.Repository
            return context.cart.Where(c => c.ClientId == userId).ToList();
         }
 
+        public Cart GetCartByUserIdAndCourseId(int userId, int courseId)
+        {
+            return context.cart.FirstOrDefault(c => c.ClientId == userId && c.CourseId == courseId);
+        }
+
+        public bool CartContainCourse(int userId, int courseId)
+        {
+            return context.cart.Any(c => c.ClientId == userId && c.CourseId == courseId);
+        }
+
     }
 }

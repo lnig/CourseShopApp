@@ -13,7 +13,7 @@
         <DataTemplate x:Key="CourseTemplate">
             <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
                 <Image Source="/Assets/Illustrations/programming.jpg"/>
-                <TextBlock Text="{Binding CourseId}" Foreground="Red" Visibility="Collapsed" x:Name="CourseId"/>
+                <TextBlock Text="{Binding CourseId}" Visibility="Collapsed" x:Name="CourseId"/>
                 <TextBlock Text="{Binding Title}" FontSize="16" DockPanel.Dock="Left" FontWeight="Heavy" TextTrimming="WordEllipsis" Margin="16 4 16 0"/>
                 <TextBlock Height="50" TextWrapping="WrapWithOverflow" Text="{Binding Description}" Margin="16 4"/>
                 <DockPanel LastChildFill="False" Margin="16 6 16 12">

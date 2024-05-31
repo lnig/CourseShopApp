@@ -84,13 +84,20 @@ namespace ShopApp.ViewModel
         private void AddToCart(int courseId)
         {
             SelectedCourse = rawCourses.FirstOrDefault(c => c.CourseId == courseId);
+
             if (SelectedCourse != null)
             {
-                Cart cart = new Cart(userId, SelectedCourse.CourseId);
-                cartRepository.AddToCart(cart);
+                if (!cartRepository.CartContainCourse(userId, SelectedCourse.CourseId))
+                {
+                    Cart cart = new Cart(userId, SelectedCourse.CourseId);
+                    cartRepository.AddToCart(cart);
+                }
+                else
+                {
+                    MessageBox.Show("You already have this course in your cart");
+                }
             }
         }
-
 
         private void NavigateToDetailsView()
         {

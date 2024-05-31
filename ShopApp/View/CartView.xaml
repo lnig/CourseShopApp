@@ -22,8 +22,23 @@
         </Style>
 
         <DataTemplate x:Key="CourseTemplate">
-            <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
-                <TextBlock Text="{Binding Title}"/>
+            <StackPanel Margin="12 0 12 0" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" Margin="0 8">
+                    <TextBlock Text="{Binding CourseId}" Visibility="Collapsed" x:Name="CourseId"/>
+                    <Image Source="/Assets/Illustrations/programming.jpg" Width="100" Height="60" Stretch="Fill"/>
+                    <TextBlock Text="{Binding Title}" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center" Margin="12 0" Width="250"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="16 0" HorizontalAlignment="Center" Width="85">
+                        <TextBlock Text="$" FontSize="14"/>
+                        <TextBlock Text="{Binding Prize}" FontSize="14"/>
+                    </StackPanel>
+                    <Button Style="{StaticResource navButton}" Width="32" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"
+                            Command="{Binding DataContext.RemoveFromCartCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding CourseId}">
+                        <StackPanel>
+                            <Image Source="/Assets/Icons/Img/remove.png" Height="18"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
@@ -39,32 +54,20 @@
 
             <Label Content="Your Cart" FontSize="24" Margin="20 0 0 12" FontWeight="Bold"/>
 
-            <StackPanel Background="#F8F9FA" Margin="12 0 12 24">
-                <TextBlock Text="{Binding Title}"/>
-            </StackPanel>
 
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="808">
                 <StackPanel Orientation="Vertical" Margin="12 6 0 0">
-                    <StackPanel Orientation="Horizontal" Background="#FFFFFF" >
+                    <StackPanel Orientation="Horizontal" Background="#FFFFFF">
                         <TextBlock Text="Order Summary" Style="{StaticResource HeaderStyle}" Height="24" Margin="10 4" Foreground="#171A1F"/>
                     </StackPanel>
 
-                    <ItemsControl x:Name="coursesItemsControl" ItemTemplate="{StaticResource CourseTemplate}" />
-
-                    <ListView ItemsSource="{Binding UserCoursesInCart}">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Course Title" DisplayMemberBinding="{Binding Title}" />
-                                <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
-                                <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Prize}" />
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-
+                    <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" Height="302">
+                        <StackPanel Margin="0 0 8 0">
+                            <ItemsControl x:Name="coursesItemsControl" ItemTemplate="{StaticResource CourseTemplate}" />
+                        </StackPanel>
+                    </ScrollViewer>
                 </StackPanel>
             </Border>
-
-
 
             <Border BorderBrush="#F3F4F6" BorderThickness="1" Width="808" Margin="0 8">
                 <StackPanel Orientation="Vertical" Margin="24 16 0 0">
