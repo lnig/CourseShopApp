@@ -18,7 +18,7 @@ namespace ShopApp
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=wpfshop;user=root;password=root;charset=utf8mb4");
+            optionsBuilder.UseMySQL("server=localhost;database=wpfshop;user=root;password=localhost;charset=utf8mb4");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -20,6 +20,7 @@ namespace ShopApp.ViewModel
         private string _email;
         private string _password;
         private string _errorMessage;
+        private string _userType;
 
         private UsersRepository usersRepository = new UsersRepository();
 
@@ -79,13 +80,15 @@ namespace ShopApp.ViewModel
                         if (user is Client client)
                         {
                             UserSession.Instance.SetClient(client);
+                            _userType = "Client";
                         }
                         else if (user is Administrator admin)
                         {
                             UserSession.Instance.SetAdministrator(admin);
+                            _userType = "Administator";
                         }
 
-                        OpenHomeView();
+                        OpenHomeView(_userType);
                         CloseCurrentWindow();
                     }
                     else
@@ -104,11 +107,11 @@ namespace ShopApp.ViewModel
             }
         }
 
-        private void OpenHomeView()
+        private void OpenHomeView(String userType)
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                var mainView = new MainWindow();
+                var mainView = new MainWindow(userType);
                 mainView.Show();
             });
         }
