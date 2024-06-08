@@ -190,8 +190,11 @@ namespace ShopApp.ViewModel
 
         private List<Course> FilterByTitle(List<Course> courses, string filterByTitle)
         {
-            return string.IsNullOrEmpty(filterByTitle) ? courses : courses.Where(course => course.Title.Contains(filterByTitle)).ToList();
+            return string.IsNullOrEmpty(filterByTitle)
+                ? courses
+                : courses.Where(course => course.Title.IndexOf(filterByTitle, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
         }
+
 
         private List<Course> SortCourses(List<Course> courses, string sortByField)
         {

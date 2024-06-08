@@ -1,4 +1,5 @@
-﻿using ShopApp.Utils;
+﻿using ShopApp.Model;
+using ShopApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,15 @@ namespace ShopApp.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(String userType)
         {
             InitializeComponent();
             MainContent.Content = new HomeView();
             ButtonHome.FontWeight = FontWeights.Bold;
+            if(userType == "Client")
+            {
+                ButtonCourses.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
