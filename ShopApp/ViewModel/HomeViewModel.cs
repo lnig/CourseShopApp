@@ -108,6 +108,16 @@ namespace ShopApp.ViewModel
             }
         }
 
+        public void ClearAllFilters()
+        {
+            filterByTitle = string.Empty;
+            filterByPriceFrom = 0;
+            filterByPriceTo = decimal.MaxValue;
+            filterByFavorite = false;
+            sortByField = "Title";
+            FilterAndSortByOwnState();
+        }
+
         public void TryToRemoveToFilterByRating(int rating)
         {
             if (filterByRating.Contains(rating))
@@ -142,8 +152,6 @@ namespace ShopApp.ViewModel
 
             filteredAndSorted = FilterByFavorite(filteredAndSorted, filterByFavorite);
 
-            filteredAndSorted = FilterByAuthor(filteredAndSorted, filterByAuthor);
-
             filteredAndSorted = FilterByTitle(filteredAndSorted, filterByTitle);
 
             if (!string.IsNullOrEmpty(sortByField))
@@ -167,7 +175,7 @@ namespace ShopApp.ViewModel
 
             return coursesInColumn;
         }
-        //Filtry i sorty
+        
         private List<Course> FilterByPrice(List<Course> courses, decimal filterByPriceFrom, decimal filterByPriceTo)
         {
             return courses.Where(course => decimal.Parse(course.Prize, CultureInfo.InvariantCulture) >= filterByPriceFrom && decimal.Parse(course.Prize, CultureInfo.InvariantCulture) <= filterByPriceTo).ToList();
@@ -181,11 +189,6 @@ namespace ShopApp.ViewModel
         private List<Course> FilterByFavorite(List<Course> courses, bool filterByFavorite)
         {
             return filterByFavorite ? courses.Where(course => course.IsFavorite).ToList() : courses;
-        }
-
-        private List<Course> FilterByAuthor(List<Course> courses, string filterByAuthor)
-        {
-            return string.IsNullOrEmpty(filterByAuthor) ? courses : courses.Where(course => course.Author.Contains(filterByAuthor)).ToList();
         }
 
         private List<Course> FilterByTitle(List<Course> courses, string filterByTitle)
@@ -202,8 +205,6 @@ namespace ShopApp.ViewModel
             {
                 case "title":
                     return courses.OrderBy(course => course.Title).ToList();
-                case "author":
-                    return courses.OrderBy(course => course.Author).ToList();
                 case "price":
                     return courses.OrderBy(course => decimal.Parse(course.Prize, CultureInfo.InvariantCulture)).ToList();
                 case "rating":

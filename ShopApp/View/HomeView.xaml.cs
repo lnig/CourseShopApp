@@ -278,5 +278,31 @@ namespace ShopApp.View
         {
             isSortByLoaded = true;
         }
+
+        private void ClearAll_Click(object sender, RoutedEventArgs e)
+        {
+       
+            homeViewModel.ClearAllFilters();
+
+            txtSearch.Text = string.Empty;
+
+            PriceRangeFrom.Text = string.Empty;
+            PriceRangeTo.Text = string.Empty;
+
+            FavoriteFilter.IsChecked = false;
+
+            Rating5Star.IsChecked = true;
+            Rating4Star.IsChecked = true;
+            Rating3Star.IsChecked = true;
+            Rating2Star.IsChecked = true;
+            Rating1Star.IsChecked = true;
+            Rating0Star.IsChecked = true;
+
+            SortBy.SelectedIndex = 0;
+
+            RefreshProductList();
+        }
+
+
     }
 }
