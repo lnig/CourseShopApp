@@ -14,7 +14,7 @@ namespace ShopApp.ViewModel
     public class EditCourseViewModel : ViewModelBase
     {
         private Course _currentCourse;
-        private readonly CourseRepository _courseRepository;
+        private readonly CourseRepository courseRepository = new CourseRepository();
 
         public Course CurrentCourse
         {
@@ -29,17 +29,14 @@ namespace ShopApp.ViewModel
         public ICommand SaveCourseCommand { get; }
         public ICommand CancelCommand { get; }
 
-        // Publiczny konstruktor bez parametrów
         public EditCourseViewModel()
         {
-            _courseRepository = new CourseRepository();
             CurrentCourse = new Course(1, "", "", "", "", "", "", 0.0f, false);
 
             SaveCourseCommand = new RelayCommand1(SaveCourse);
             CancelCommand = new RelayCommand1(Cancel);
         }
 
-        // Konstruktor z parametrem Course
         public EditCourseViewModel(Course course) : this()
         {
             CurrentCourse = course;
@@ -47,7 +44,7 @@ namespace ShopApp.ViewModel
 
         private void SaveCourse()
         {
-            _courseRepository.UpdateCourse(CurrentCourse);
+            courseRepository.UpdateCourse(CurrentCourse);
             CloseWindow(true);
         }
 
