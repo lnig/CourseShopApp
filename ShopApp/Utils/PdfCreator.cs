@@ -18,6 +18,7 @@ namespace ShopApp.Utils
         {
             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
         }
+
         public void GenerateCourseList()
         {
             List<Course> courses = new DataContext().course.ToList();
@@ -50,7 +51,7 @@ namespace ShopApp.Utils
                                     .AlignCenter()
                                     .AlignMiddle();
                             }
-                            
+
                             table.ColumnsDefinition(columns =>
                             {
                                 columns.ConstantColumn(100);
@@ -84,18 +85,24 @@ namespace ShopApp.Utils
                                 table.Cell().Text(course.Prize).AlignCenter();
                                 table.Cell().Text(course.Author).AlignCenter();
                                 table.Cell().Text(course.Rating.ToString()).AlignCenter();
-
                             }
                         });
                     });
                 });
-            }).GeneratePdf("CourseList.pdf");
+            }).GeneratePdf(GetDesktopPath("CourseList.pdf"));
         }
+
         public byte[] GetBytesOfImage()
         {
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string sFile = System.IO.Path.Combine(currentDirectory, @"..\..\Assets\Illustrations\programming.jpg");
             return File.ReadAllBytes(sFile);
+        }
+
+        private string GetDesktopPath(string fileName)
+        {
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            return Path.Combine(desktopPath, fileName);
         }
     }
 }

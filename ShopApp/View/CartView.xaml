@@ -127,10 +127,10 @@
 
                 <TextBlock Text="Voucher" Style="{StaticResource HeaderStyle}" Margin=" 0 30 0 10"/>
                 <StackPanel Orientation="Horizontal">
-                    <TextBox BorderBrush="#9095A0" BorderThickness="1" Width="204" Height="35" VerticalContentAlignment="Center" />
-                    <Button Background="#F3F4F6" Content="Apply" Width="60" Height="30" Margin="10,0,0,0" BorderBrush="Transparent"/>
+                    <TextBox Text="{Binding VoucherCode}" BorderBrush="#9095A0" BorderThickness="1" Width="204" Height="35" VerticalContentAlignment="Center"/>
+                    <Button Background="#F3F4F6" Content="Apply" Width="60" Height="30" Margin="10,0,0,0" BorderBrush="Transparent" Command="{Binding ApplyVoucherCommand}"/>
                 </StackPanel>
-
+                
                 <TextBlock Text="Summary" Style="{StaticResource HeaderStyle}" Margin="0 30 0 10"/>
                 <StackPanel Orientation="Vertical">
 
@@ -149,7 +149,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Discount" HorizontalAlignment="Left" FontSize="14"/>
-                        <TextBlock Text="- 15$" Grid.Column="1" HorizontalAlignment="Right" FontSize="14"/>
+                        <TextBlock Text="{Binding Discount}" Grid.Column="1" HorizontalAlignment="Right" FontSize="14"/>
                     </Grid>
 
 
@@ -161,7 +161,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Total" HorizontalAlignment="Left" FontSize="14"/>
-                        <TextBlock Text="187$" Grid.Column="1" HorizontalAlignment="Right" FontSize="14"/>
+                            <TextBlock Text="{Binding Total}" Grid.Column="1" HorizontalAlignment="Right" FontSize="14"/>
                     </Grid>
 
                 </StackPanel>
