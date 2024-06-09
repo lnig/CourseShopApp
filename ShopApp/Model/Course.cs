@@ -23,6 +23,7 @@ namespace ShopApp.Model
         public float Rating { get; set; }
         public bool IsFavorite { get; set; }
         public virtual Category Category { get; set; }
+        public List<OrderCourse> OrderCourses { get; set; } = new List<OrderCourse>();
 
         public Course(int categoryId, string title, string author, string description, string shortDescription, string prize, string imageTitle, float rating, bool isFavorite)
         {

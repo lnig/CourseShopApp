@@ -27,9 +27,9 @@
                         <TextBlock Text="{Binding Description}" FontSize="14" TextWrapping="Wrap" Width="200" TextTrimming="CharacterEllipsis" Height="60"/>
                     </StackPanel>
 
-                    <StackPanel VerticalAlignment="Center" Width="100" HorizontalAlignment="Center">
+                    <StackPanel VerticalAlignment="Center" Width="130" HorizontalAlignment="Center">
                         <Border CornerRadius="12" Background="LightGray" Height="28" HorizontalAlignment="Center">
-                            <TextBlock Text="{Binding Category.Name}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="16,4" />
+                            <TextBlock Text="{Binding Category.Name}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="8 4" />
                         </Border>
                     </StackPanel>
 
@@ -40,7 +40,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel VerticalAlignment="Center" Width ="180" HorizontalAlignment="Center">
+                    <StackPanel VerticalAlignment="Center" Width ="150" HorizontalAlignment="Center">
                         <TextBlock Text="{Binding Author}" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </StackPanel>
 
@@ -92,8 +92,10 @@
                         </Grid>
                     </Border>
 
-                    <ComboBox SelectedIndex="0" Background="#F3F4F6" Margin="16 0" BorderThickness="0" FontSize="14" FontWeight="SemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >
+                    <ComboBox x:Name="SortByComboBox" SelectedIndex="0" Background="#F3F4F6" Margin="16 0" BorderThickness="0" FontSize="14" FontWeight="SemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectionChanged="SortByComboBox_SelectionChanged" >
                         <ComboBoxItem Content="Author"/>
+                        <ComboBoxItem Content="Title"/>
+                        <ComboBoxItem Content="Price"/>
                     </ComboBox>
                 </StackPanel>
 
@@ -128,7 +130,7 @@
                                 <TextBlock Text="DESCRIPTION" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#171A1F"/>
                             </StackPanel>
 
-                            <StackPanel VerticalAlignment="Center" Width="100" HorizontalAlignment="Center">
+                            <StackPanel VerticalAlignment="Center" Width="130" HorizontalAlignment="Center">
                                 <Border HorizontalAlignment="Center">
                                     <TextBlock Text="CATEGORY" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#171A1F"/>
                                 </Border>
@@ -138,7 +140,7 @@
                                 <TextBlock Text="PRICE" FontSize="14" VerticalAlignment="Center" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="#171A1F"/>
                             </StackPanel>
 
-                            <StackPanel VerticalAlignment="Center" Width ="180" HorizontalAlignment="Center">
+                            <StackPanel VerticalAlignment="Center" Width ="150" HorizontalAlignment="Center">
                                 <TextBlock Text="Author" FontSize="14" VerticalAlignment="Center" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="#171A1F"/>
                             </StackPanel>
 

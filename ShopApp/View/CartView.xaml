@@ -85,17 +85,17 @@
 
                         <StackPanel Orientation="Vertical" Grid.Column="0">
                             <TextBlock Text="Full Name" FontSize="14" FontWeight="SemiBold" Margin="0 0 0 4" Foreground="#424956" />
-                            <TextBox Height="35" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding FullName}" Height="35" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20,0,0,0">
                             <TextBlock Text="Phone Number" FontSize="14" FontWeight="SemiBold" Margin="0 0 0 4" Foreground="#424956"/>
-                            <TextBox Height="35" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding PhoneNumber}" Height="35" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
                         </StackPanel>
                     </Grid>
                     <StackPanel Orientation="Vertical" Margin="0 12 24 24">
                         <TextBlock Text="Address" FontSize="14" FontWeight="SemiBold" Margin="0 0 0 4" Foreground="#424956" />
-                        <TextBox Height="35" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
+                        <TextBox Text="{Binding Address}" Height="35" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
                     </StackPanel>
 
                 </StackPanel>
@@ -166,7 +166,7 @@
 
                 </StackPanel>
 
-                <Button Content="Order" Height="44" Margin="0 40 0 0"/>
+                <Button Content="Order" Height="44" Margin="0 40 0 0" Command="{Binding OrderCommand}"/>
             </StackPanel>
 
 

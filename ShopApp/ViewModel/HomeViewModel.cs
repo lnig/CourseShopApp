@@ -96,6 +96,7 @@ namespace ShopApp.ViewModel
                 {
                     Cart cart = new Cart(userId, SelectedCourse.CourseId);
                     cartRepository.AddToCart(cart);
+                    MessageBox.Show("Added to Cart");
                 }
                 else
                 {

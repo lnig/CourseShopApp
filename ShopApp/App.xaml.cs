@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+using ShopApp.Model;
 using ShopApp.Utils;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,9 @@ namespace ShopApp
         protected override void OnStartup(StartupEventArgs e)
         {
             DatabaseFacade facade = new DatabaseFacade(new DataContext());
+
+            
+
         }
 
     }
