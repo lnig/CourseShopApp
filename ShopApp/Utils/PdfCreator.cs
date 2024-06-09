@@ -2,6 +2,7 @@
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using ShopApp.Model;
+using ShopApp.Repository;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +15,7 @@ namespace ShopApp.Utils
 {
     public class PdfCreator
     {
+        private CourseRepository courseRepository = new CourseRepository();
         public PdfCreator()
         {
             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
@@ -21,7 +23,7 @@ namespace ShopApp.Utils
 
         public void GenerateCourseList()
         {
-            List<Course> courses = new DataContext().course.ToList();
+            List<Course> courses = courseRepository.GetAllCoursesWithCategory();
             Document.Create(container =>
             {
                 container.Page(page =>
@@ -81,7 +83,7 @@ namespace ShopApp.Utils
                                 table.Cell().Image(GetBytesOfImage());
                                 table.Cell().Text(course.Title).AlignCenter();
                                 table.Cell().Text(course.ShortDescription).AlignCenter();
-                                table.Cell().Text(course.CategoryId.ToString()).AlignCenter();
+                                table.Cell().Text(course.Category.Name).AlignCenter();
                                 table.Cell().Text(course.Prize).AlignCenter();
                                 table.Cell().Text(course.Author).AlignCenter();
                                 table.Cell().Text(course.Rating.ToString()).AlignCenter();

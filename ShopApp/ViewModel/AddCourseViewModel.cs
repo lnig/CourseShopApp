@@ -4,6 +4,7 @@ using ShopApp.Utils;
 using ShopApp.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -18,8 +19,11 @@ namespace ShopApp.ViewModel
     {
         private Course _newCourse;
         private string _errorMessage;
+        private ObservableCollection<Category> _allCategories;
+        private Category _selectedCategory;
 
         private readonly CourseRepository courseRepository = new CourseRepository();
+        private readonly CategoryRepository categoryRepository = new CategoryRepository();
 
         public Course NewCourse
         {
@@ -40,14 +44,32 @@ namespace ShopApp.ViewModel
                 OnPropertyChanged();
             }
         }
+        public ObservableCollection<Category> AllCategories
+        {
+            get { return _allCategories; }
+            set
+            {
+                _allCategories = value;
+                OnPropertyChanged();
+            }
+        }
 
+        public Category SelectedCategory
+        {
+            get { return _selectedCategory; }
+            set
+            {
+                _selectedCategory = value;
+                OnPropertyChanged();
+            }
+        }
         public ICommand AddCourseCommand { get; }
         public ICommand CancelCommand { get; }
 
         public AddCourseViewModel()
         {
             NewCourse = new Course(1, "", "", "", "", "", "", 0.0f, false);
-
+            LoadAllCategories();
             AddCourseCommand = new RelayCommand1(AddCourse);
             CancelCommand = new RelayCommand1(Cancel);
         }
@@ -58,7 +80,12 @@ namespace ShopApp.ViewModel
                    !string.IsNullOrWhiteSpace(NewCourse.Author) &&
                    !string.IsNullOrWhiteSpace(NewCourse.Description) &&
                    !string.IsNullOrWhiteSpace(NewCourse.ShortDescription) &&
-                   !string.IsNullOrWhiteSpace(NewCourse.Prize);
+                   !string.IsNullOrWhiteSpace(NewCourse.Prize) &&
+                   SelectedCategory != null;
+        }
+        private void LoadAllCategories()
+        {
+            AllCategories = new ObservableCollection<Category>(categoryRepository.GetAllCategories());
         }
 
         private bool PriceIsNumber()
@@ -99,6 +126,7 @@ namespace ShopApp.ViewModel
                 return ;
             }
 
+            NewCourse.CategoryId = SelectedCategory.CategoryId;
             courseRepository.AddCourse(NewCourse);
             CloseWindow(true);
         }
