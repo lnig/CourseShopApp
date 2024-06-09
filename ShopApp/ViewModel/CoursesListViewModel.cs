@@ -46,8 +46,8 @@ namespace ShopApp.ViewModel
         public CoursesListViewModel()
         {
            LoadAllCourses();
-            ProcessedCourses = AllCourses;
-            DeleteCourseCommand = new RelayCommand<int>(DeleteCourse);
+           ProcessedCourses = AllCourses;
+           DeleteCourseCommand = new RelayCommand<int>(DeleteCourse);
            OpenAddCourseCommand = new RelayCommand(OpenAddCourse);
            EditCourseCommand = new RelayCommand<int>(EditCourse);
         }
@@ -113,7 +113,7 @@ namespace ShopApp.ViewModel
         }
         private List<Course> DeepCopy(List<Course> courses)
         {
-            return courses.Select(course => new Course(course.CourseId, course.CategoryId, course.Title, course.Author, course.Description, course.ShortDescription, course.Prize, course.ImageTitle, course.Rating, course.IsFavorite)).ToList();
+           return courses = courseRepository.GetAllCoursesWithCategory();
         }
         public void FilterAndSortCourses()
         {
@@ -141,7 +141,7 @@ namespace ShopApp.ViewModel
                 case "title":
                     return courses.OrderBy(course => course.Title).ToList();
                 case "author":
-                    return courses.OrderBy(course => course.Title).ToList();
+                    return courses.OrderBy(course => course.Author).ToList();
                 case "price":
                     return courses.OrderBy(course => decimal.Parse(course.Prize, CultureInfo.InvariantCulture)).ToList();
                 default:
