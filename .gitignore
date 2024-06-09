@@ -8,3 +8,5 @@
 /.vs/ShopApp/FileContentIndex
 /.vs/ShopApp/v17/.suo
 /ShopApp/Utils/DataContext.cs
+/.vs/slnx.sqlite
+/.vs/slnx.sqlite-journal
