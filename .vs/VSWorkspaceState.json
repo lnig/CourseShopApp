@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\ShopApp",
-    "\\ShopApp\\ViewModel"
+    ""
   ],
-  "SelectedNode": "\\ShopApp\\ViewModel\\EditCourseViewModel.cs",
+  "SelectedNode": "\\ShopApp.sln",
   "PreviewInSolutionExplorer": false
 }
