@@ -145,7 +145,7 @@
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
 
                         <StackPanel>
-                            <TextBlock Text="Condition 2" FontSize="16" FontWeight="Bold"/>
+                            <TextBlock Text="Categories" FontSize="16" FontWeight="Bold"/>
                             <CheckBox Content="Checkbox" Margin="0 12 0 4"/>
                             <CheckBox Content="Checkbox" Margin="0 4"/>
                             <CheckBox Content="Checkbox" Margin="0 4"/>

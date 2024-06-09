@@ -55,9 +55,10 @@
 
             <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20,0,0,0">
                 <TextBlock Text="Category" FontSize="14" FontWeight="SemiBold" Margin="0 0 0 4" Foreground="#424956"/>
-                <ComboBox Height="33" BorderBrush="Transparent" BorderThickness="0">
-
-                </ComboBox>
+                <ComboBox Height="33" BorderBrush="Transparent" BorderThickness="0"
+                            ItemsSource="{Binding AllCategories}" 
+                            SelectedItem="{Binding SelectedCategory}" 
+                            DisplayMemberPath="Name" />
             </StackPanel>
         </Grid>
 

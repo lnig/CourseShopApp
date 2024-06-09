@@ -20,6 +20,7 @@ namespace ShopApp.ViewModel
         private CartRepository cartRepository = new CartRepository();
         private UsersRepository usersRepository = new UsersRepository();
         private CourseRepository courseRepository = new CourseRepository();
+        private CategoryRepository categoryRepository = new CategoryRepository();
 
 
         public List<Course> testCourses;
@@ -27,6 +28,8 @@ namespace ShopApp.ViewModel
         public List<Course> rawCourses = new List<Course>();
 
         public List<Course> processedCourses = new List<Course>();
+
+        public List<Category> allCategories = new List<Category>();
         
         public int processedCoursesCount = 3;
 
@@ -66,6 +69,7 @@ namespace ShopApp.ViewModel
 
                 rawCourses = courseRepository.GetAllCoursesWithCategory();
                 processedCourses = rawCourses.ToList();
+                allCategories = categoryRepository.GetAllCategories();
                 processedCoursesCount = processedCourses.Count;
                 ShowDetailsCommand = new RelayCommand<int>(ShowDetails);
                 AddToCartCommand = new RelayCommand<int>(AddToCart);
