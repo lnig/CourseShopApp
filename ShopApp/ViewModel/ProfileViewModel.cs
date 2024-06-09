@@ -3,6 +3,7 @@ using ShopApp.Repository;
 using ShopApp.Utils;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -16,10 +17,8 @@ namespace ShopApp.ViewModel
 {
     public class ProfileViewModel : INotifyPropertyChanged
     {
-        public string Title { get; } = "Profile";
-
         private UsersRepository usersRepository = new UsersRepository();
-
+        private OrderRepository orderRepository = new OrderRepository();
 
         private string _userName;
         private string _userSurname;
@@ -32,7 +31,9 @@ namespace ShopApp.ViewModel
         private string _tempEmail;
         private string _tempPassword;
         private string _errorMessage;
-        
+
+        public ObservableCollection<Order> OrdersHistory { get; set; } = new ObservableCollection<Order>();
+
         public string Name
         {
             get => _userName;
@@ -130,7 +131,6 @@ namespace ShopApp.ViewModel
 
         public ICommand SaveCommand { get; }
 
-
         public ProfileViewModel()
         {
             Name = UserSession.Instance.Name;
@@ -139,6 +139,7 @@ namespace ShopApp.ViewModel
             Password = UserSession.Instance.Password;
 
             SaveCommand = new RelayCommand(SaveInformation);
+            LoadOrdersHistory();
         }
 
         private bool CanChange()
@@ -153,10 +154,8 @@ namespace ShopApp.ViewModel
             {
                 if (CanChange())
                 {
-           
                     if (!usersRepository.EmailTaken(TempEmail))
                     {
-                  
                         UserSession.Instance.Name = TempName;
                         UserSession.Instance.Surname = TempSurname;
                         UserSession.Instance.Email = TempEmail;
@@ -168,7 +167,6 @@ namespace ShopApp.ViewModel
                         Password = TempPassword;
 
                         usersRepository.UpdateUser(UserSession.Instance);
-                        
                     }
                     else
                     {
@@ -179,11 +177,21 @@ namespace ShopApp.ViewModel
                 {
                     ErrorMessage = "Fill.";
                 }
-            }catch(Exception ex)
-            {
-               Console.WriteLine(ex.ToString());
             }
-           
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void LoadOrdersHistory()
+        {
+            var orders = orderRepository.GetAllUserOrdersByUserId(UserSession.Instance.UserId);
+            OrdersHistory.Clear();
+            foreach (var order in orders)
+            {
+                OrdersHistory.Add(order);
+            }
         }
 
         public void UpdatePassword(object parameter)

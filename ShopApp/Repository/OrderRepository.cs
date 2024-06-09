@@ -1,4 +1,5 @@
-﻿using ShopApp.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ShopApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,23 @@ namespace ShopApp.Repository
                 throw;
             }
            
+        }
+
+        public List<Order> GetAllUserOrdersByUserId(int userId)
+        {
+            return context.order
+                .Where(o => o.UserId == userId)
+                .Include(o => o.OrderCourses)
+                .ThenInclude(oc => oc.Course)
+                .ToList();
+        }
+
+        public List<OrderCourse> GetOrderCoursesInOrder(int orderId)
+        {
+            return context.orderCourse
+                .Where(oc => oc.OrderId == orderId)
+                .Include(oc => oc.Course)
+                .ToList();
         }
 
     }

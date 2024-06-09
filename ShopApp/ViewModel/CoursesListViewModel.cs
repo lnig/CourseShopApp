@@ -46,8 +46,8 @@ namespace ShopApp.ViewModel
         public CoursesListViewModel()
         {
            LoadAllCourses();
-            ProcessedCourses = AllCourses;
-            DeleteCourseCommand = new RelayCommand<int>(DeleteCourse);
+           ProcessedCourses = AllCourses;
+           DeleteCourseCommand = new RelayCommand<int>(DeleteCourse);
            OpenAddCourseCommand = new RelayCommand(OpenAddCourse);
            EditCourseCommand = new RelayCommand<int>(EditCourse);
         }

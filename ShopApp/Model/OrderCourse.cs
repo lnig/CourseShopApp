@@ -14,5 +14,8 @@ namespace ShopApp.Model
         public int OrderId { get; set; }
         [Key, Column(Order = 1)]
         public int CourseId { get; set; }
+
+        [ForeignKey("CourseId")]
+        public Course Course { get; set; }
     }
 }
