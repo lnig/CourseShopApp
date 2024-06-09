@@ -43,6 +43,9 @@
                 </DockPanel>
             </StackPanel>
         </DataTemplate>
+        <DataTemplate x:Key="CheckBoxTemplate">
+            <CheckBox Content="{Binding Name}" IsChecked="True" Checked="CategoryCheckBox_Checked" Unchecked="CategoryCheckBox_Unchecked"/>
+        </DataTemplate>
     </UserControl.Resources>
 
     <Border Background="#fffffe">
@@ -145,10 +148,11 @@
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
 
                         <StackPanel>
+                            
                             <TextBlock Text="Categories" FontSize="16" FontWeight="Bold"/>
-                            <CheckBox Content="Checkbox" Margin="0 12 0 4"/>
-                            <CheckBox Content="Checkbox" Margin="0 4"/>
-                            <CheckBox Content="Checkbox" Margin="0 4"/>
+                            <ItemsControl x:Name="CategoriesListControl" ItemTemplate="{StaticResource CheckBoxTemplate}" />
+
+
                         </StackPanel>
 
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>

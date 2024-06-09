@@ -82,6 +82,14 @@ namespace ShopApp.View
             ButtonCourses.FontWeight = FontWeights.Regular;
             ButtonProfile.FontWeight = FontWeights.Bold;
         }
+        private void NavigateToLogin(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ProfileView();
+            ButtonHome.FontWeight = FontWeights.Regular;
+            ButtonCart.FontWeight = FontWeights.Regular;
+            ButtonCourses.FontWeight = FontWeights.Regular;
+            ButtonProfile.FontWeight = FontWeights.Bold;
+        }
 
         private void ButtonHome_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -113,6 +121,16 @@ namespace ShopApp.View
             ButtonCourses.Background = new SolidColorBrush(Colors.Transparent);
         }
 
+        private void ButtonLogout_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonCourses.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
+        }
+
+        private void ButtonLogout_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ButtonCourses.Background = new SolidColorBrush(Colors.Transparent);
+        }
+
         private void ButtonProfile_MouseEnter(object sender, MouseEventArgs e)
         {
             ButtonProfile.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
@@ -122,6 +140,7 @@ namespace ShopApp.View
         {
             ButtonProfile.Background = new SolidColorBrush(Colors.Transparent);
         }
+
 
     }
 }

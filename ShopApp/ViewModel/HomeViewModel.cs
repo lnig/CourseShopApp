@@ -20,7 +20,6 @@ namespace ShopApp.ViewModel
         private CartRepository cartRepository = new CartRepository();
         private UsersRepository usersRepository = new UsersRepository();
         private CourseRepository courseRepository = new CourseRepository();
-        private CategoryRepository categoryRepository = new CategoryRepository();
 
 
         public List<Course> testCourses;
@@ -28,8 +27,8 @@ namespace ShopApp.ViewModel
         public List<Course> rawCourses = new List<Course>();
 
         public List<Course> processedCourses = new List<Course>();
-
-        public List<Category> allCategories = new List<Category>();
+        public List<Category> categories = new List<Category>();
+        public List<Category> allowedCategories = new List<Category>(); 
         
         public int processedCoursesCount = 3;
 
@@ -69,10 +68,11 @@ namespace ShopApp.ViewModel
 
                 rawCourses = courseRepository.GetAllCoursesWithCategory();
                 processedCourses = rawCourses.ToList();
-                allCategories = categoryRepository.GetAllCategories();
                 processedCoursesCount = processedCourses.Count;
                 ShowDetailsCommand = new RelayCommand<int>(ShowDetails);
                 AddToCartCommand = new RelayCommand<int>(AddToCart);
+                categories = context.category.ToList();
+                allowedCategories = context.category.ToList();
             }
         }
 
@@ -145,9 +145,9 @@ namespace ShopApp.ViewModel
         }
         public void FilterAndSortByOwnState()
         {
-            processedCourses = FilterAndSortCourses(rawCourses, filterByPriceFrom, filterByPriceTo, filterByRating, filterByFavorite, filterByAuthor, filterByTitle, sortByField);
+            processedCourses = FilterAndSortCourses(rawCourses, filterByPriceFrom, filterByPriceTo, filterByRating, filterByFavorite, filterByAuthor, filterByTitle, sortByField, allowedCategories.Select(c => c.CategoryId).ToList());
         }
-        public List<Course> FilterAndSortCourses(List<Course> courses, decimal filterByPriceFrom, decimal filterByPriceTo, List<int> filterByRating, bool filterByFavorite, string filterByAuthor, string filterByTitle, string sortByField)
+        public List<Course> FilterAndSortCourses(List<Course> courses, decimal filterByPriceFrom, decimal filterByPriceTo, List<int> filterByRating, bool filterByFavorite, string filterByAuthor, string filterByTitle, string sortByField, List<int> allowedCategoryIds)
         {
             List<Course> filteredAndSorted = DeepCopy(courses); 
 
@@ -159,6 +159,8 @@ namespace ShopApp.ViewModel
             filteredAndSorted = FilterByFavorite(filteredAndSorted, filterByFavorite);
 
             filteredAndSorted = FilterByTitle(filteredAndSorted, filterByTitle);
+
+            filteredAndSorted = FilterByAllowedCategories(filteredAndSorted, allowedCategoryIds);
 
             if (!string.IsNullOrEmpty(sortByField))
             {
@@ -181,7 +183,10 @@ namespace ShopApp.ViewModel
 
             return coursesInColumn;
         }
-        
+        private List<Course> FilterByAllowedCategories(List<Course> courses, List<int> allowedCategoryIds)
+        {
+            return courses.Where(course => allowedCategoryIds.Contains(course.CategoryId)).ToList();
+        }
         private List<Course> FilterByPrice(List<Course> courses, decimal filterByPriceFrom, decimal filterByPriceTo)
         {
             return courses.Where(course => decimal.Parse(course.Prize, CultureInfo.InvariantCulture) >= filterByPriceFrom && decimal.Parse(course.Prize, CultureInfo.InvariantCulture) <= filterByPriceTo).ToList();
