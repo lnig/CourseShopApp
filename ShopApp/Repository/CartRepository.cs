@@ -44,5 +44,12 @@ namespace ShopApp.Repository
             return context.cart.Any(c => c.ClientId == userId && c.CourseId == courseId);
         }
 
+        public void ClearCart(int userId)
+        {
+            var cartItems = context.cart.Where(c => c.ClientId == userId).ToList();
+            context.cart.RemoveRange(cartItems);
+            context.SaveChanges();
+        }
+
     }
 }

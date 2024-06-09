@@ -18,6 +18,7 @@
             </Border>
 
             <TextBlock Text="{Binding SelectedCourse.Title}" Foreground="#171A1F" FontSize="32" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedCourse.Category.Name}" Foreground="#171A1F" FontSize="16" FontWeight="Medium" />
 
             <StackPanel Orientation="Horizontal" Margin="0 12 0 0">
                 <Image Stretch="Fill" Source="/Assets/Illustrations/programming.jpg" Width="720" Height="450"/>

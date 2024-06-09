@@ -242,14 +242,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Cart.cs" />
-    <Compile Include="Model\Photo.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderCourse.cs" />
     <Compile Include="Repository\CartRepository.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\CourseRepository.cs" />
     <Compile Include="Model\Administrator.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\UserSession.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Utils\DataContext.cs" />
     <Compile Include="Utils\MySqlServerVersion.cs" />
     <Compile Include="Repository\UsersRepository.cs" />

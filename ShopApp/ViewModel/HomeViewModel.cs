@@ -19,6 +19,7 @@ namespace ShopApp.ViewModel
 
         private CartRepository cartRepository = new CartRepository();
         private UsersRepository usersRepository = new UsersRepository();
+        private CourseRepository courseRepository = new CourseRepository();
 
 
         public List<Course> testCourses;
@@ -62,7 +63,8 @@ namespace ShopApp.ViewModel
             userId = UserSession.Instance.UserId;
             using (var context = new DataContext())
             {
-                rawCourses = context.course.ToList();
+
+                rawCourses = courseRepository.GetAllCoursesWithCategory();
                 processedCourses = rawCourses.ToList();
                 processedCoursesCount = processedCourses.Count;
                 ShowDetailsCommand = new RelayCommand<int>(ShowDetails);
