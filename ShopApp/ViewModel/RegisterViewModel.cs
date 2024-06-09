@@ -84,8 +84,8 @@ namespace ShopApp.ViewModel
 
         private bool CanRegister()
         {
-            return !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(Surname) &&
-                   !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
+            return !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(Surname) &&
+                   !string.IsNullOrWhiteSpace(Email) && !string.IsNullOrWhiteSpace(Password);
         }
 
         private void Register(object parameter)

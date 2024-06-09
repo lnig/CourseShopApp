@@ -13,12 +13,9 @@
         <vm:EditCourseViewModel/>
     </Window.DataContext>
 
-    <StackPanel Margin="32 ">
+    <StackPanel Margin="32 16">
+        
         <Label Content="Edit Course" FontSize="20" FontWeight="Bold"/>
-
-        <Separator Background="#DEE1E6" Margin="0 8"/>
-
-        <Label Content="Enter Information" FontSize="20" FontWeight="SemiBold"/>
 
         <Border BorderThickness="1,1,1,1" Height="200">
             <Border.BorderBrush>
@@ -80,11 +77,13 @@
             <TextBox Text="{Binding CurrentCourse.Description}" Height="90" Background="#F3F4F6" BorderBrush="Transparent" FontSize="16" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4" DockPanel.Dock="Left">
+        <Label FontSize="12" Foreground="#EB4C60" x:Name="errorMessage" Content="{Binding ErrorMessage}"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 16">
+            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4">
                 <Button Command="{Binding CancelCommand}" Content="Cancel" Width="100" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource navButton}"/>
             </Border>
-            <Border CornerRadius="4" Background="Black" DockPanel.Dock="Right" Height="32" Margin="16 0 0 0">
+            <Border CornerRadius="4" Background="Black" Height="32" Margin="16 0 0 0">
                 <Button Command="{Binding SaveCourseCommand}" Content="Save" Width="100" Background="Transparent" Foreground="White" BorderBrush="Transparent" BorderThickness="0" Style="{StaticResource navButton}"/>
             </Border>
         </StackPanel>

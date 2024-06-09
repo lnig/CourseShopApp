@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -16,7 +17,9 @@ namespace ShopApp.ViewModel
     public class AddCourseViewModel : ViewModelBase
     {
         private Course _newCourse;
-        private readonly CourseRepository _courseRepository;
+        private string _errorMessage;
+
+        private readonly CourseRepository courseRepository = new CourseRepository();
 
         public Course NewCourse
         {
@@ -28,21 +31,75 @@ namespace ShopApp.ViewModel
             }
         }
 
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                _errorMessage = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand AddCourseCommand { get; }
         public ICommand CancelCommand { get; }
 
         public AddCourseViewModel()
         {
-            _courseRepository = new CourseRepository();
             NewCourse = new Course(1, "", "", "", "", "", "", 0.0f, false);
 
             AddCourseCommand = new RelayCommand1(AddCourse);
             CancelCommand = new RelayCommand1(Cancel);
         }
 
+        private bool CanAddCourse()
+        {
+            return !string.IsNullOrWhiteSpace(NewCourse.Title) &&
+                   !string.IsNullOrWhiteSpace(NewCourse.Author) &&
+                   !string.IsNullOrWhiteSpace(NewCourse.Description) &&
+                   !string.IsNullOrWhiteSpace(NewCourse.ShortDescription) &&
+                   !string.IsNullOrWhiteSpace(NewCourse.Prize);
+        }
+
+        private bool PriceIsNumber()
+        {
+            foreach (char c in NewCourse.Prize)
+            {
+                if (!char.IsDigit(c) && c != '.')
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool PriceIsGoodPattern()
+        {
+            return Regex.IsMatch(NewCourse.Prize, @"^\d+(\.\d{2})");
+        }
+
+
         private void AddCourse()
         {
-            _courseRepository.AddCourse(NewCourse);
+            if (!CanAddCourse())
+            {
+                ErrorMessage = "Please fill in the required fields";
+                return;
+            }
+
+            if (PriceIsNumber())
+            {
+                ErrorMessage = "Price must be number";
+                return;
+            }
+
+            if (!PriceIsGoodPattern())
+            {
+                ErrorMessage = "Price must be in good pattern(etc. 12.00)";
+                return ;
+            }
+
+            courseRepository.AddCourse(NewCourse);
             CloseWindow(true);
         }
 

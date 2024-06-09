@@ -68,10 +68,13 @@ namespace ShopApp.ViewModel
             {
                 var editCourseView = new EditCourseView();
                 var editCourseViewModel = new EditCourseViewModel(course);
+                var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
                 editCourseView.DataContext = editCourseViewModel;
+                mainWindow.Opacity = 0.5;
 
                 if (editCourseView.ShowDialog() == true)
                 {
+                    mainWindow.Opacity = 1;
                     RefreshView();
                 }
             }
