@@ -29,7 +29,7 @@
 
                     <StackPanel VerticalAlignment="Center" Width="100" HorizontalAlignment="Center">
                         <Border CornerRadius="12" Background="LightGray" Height="28" HorizontalAlignment="Center">
-                            <TextBlock Text="Category" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="16,4" />
+                            <TextBlock Text="{Binding Category.Name}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="16,4" />
                         </Border>
                     </StackPanel>
 

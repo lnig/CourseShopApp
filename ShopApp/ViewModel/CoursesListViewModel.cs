@@ -21,6 +21,8 @@ namespace ShopApp.ViewModel
 
         public List<Course> AllCourses = new List<Course>();
 
+        public List<Category> AllCategories = new List<Category>();
+
         private Course _selectedCourse;
 
         public Course SelectedCourse
@@ -47,7 +49,7 @@ namespace ShopApp.ViewModel
 
         private void LoadAllCourses()
         {
-            AllCourses = courseRepository.GetAllCourses();
+            AllCourses = courseRepository.GetAllCoursesWithCategory();
         }
 
         public void DeleteCourse(int courseId)

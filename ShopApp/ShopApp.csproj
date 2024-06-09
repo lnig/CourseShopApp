@@ -240,6 +240,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Cart.cs" />
     <Compile Include="Repository\CartRepository.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\CourseRepository.cs" />
     <Compile Include="Model\Administrator.cs" />
     <Compile Include="Model\Category.cs" />
