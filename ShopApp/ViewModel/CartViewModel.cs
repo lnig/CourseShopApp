@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -24,8 +25,8 @@ namespace ShopApp.ViewModel
 
         public ObservableCollection<Course> UserCoursesInCart { get; set; }
 
-
         private Cart _selectedCart;
+        private decimal _subTotal;
 
         public Cart SelectedCart
         {
@@ -37,6 +38,15 @@ namespace ShopApp.ViewModel
             }
         }
 
+        public decimal SubTotal
+        {
+            get { return _subTotal; }
+            set
+            {
+                _subTotal = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand RemoveFromCartCommand { get; private set; }
 
@@ -44,6 +54,7 @@ namespace ShopApp.ViewModel
         {
             UserCoursesInCart = new ObservableCollection<Course>();
             LoadUserCoursesFromCart();
+            SubTotal = CalculatePrice();
             RemoveFromCartCommand = new RelayCommand<int>(RemoveFromCart);
         }
 
@@ -70,12 +81,31 @@ namespace ShopApp.ViewModel
         {
             SelectedCart = cartRepository.GetCartByUserIdAndCourseId(GetCurrentClientId(), courseId);
 
-            if(SelectedCart != null)
+            if (SelectedCart != null)
             {
                 cartRepository.RemoveFromCart(SelectedCart.CartId);
+                SubTotal = CalculatePrice();
                 RefreshView();
             }
+        }
 
+        private decimal CalculatePrice()
+        {
+            var cartItems = cartRepository.GetCartByUserId(GetCurrentClientId());
+            decimal allPrice = 0.00m;
+
+            foreach (var cartItem in cartItems)
+            {
+                var course = courseRepository.GetCourseById(cartItem.CourseId);
+                if (course != null)
+                {
+                    if (decimal.TryParse(course.Prize, NumberStyles.Currency, CultureInfo.InvariantCulture, out decimal prize))
+                    {
+                        allPrice += prize;
+                    }
+                }
+            }
+            return allPrice;
         }
 
         private void RefreshView()
@@ -86,6 +116,5 @@ namespace ShopApp.ViewModel
                 mainWindow.MainContent.Content = new CartView { DataContext = this };
             }
         }
-
     }
 }

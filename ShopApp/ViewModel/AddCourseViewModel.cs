@@ -75,7 +75,7 @@ namespace ShopApp.ViewModel
 
         private bool PriceIsGoodPattern()
         {
-            return Regex.IsMatch(NewCourse.Prize, @"^\d+(\.\d{2})");
+            return Regex.IsMatch((string)NewCourse.Prize, @"^\d+(\.\d{2})");
         }
 
 
