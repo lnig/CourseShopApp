@@ -1,4 +1,5 @@
-﻿using ShopApp.ViewModel;
+﻿using ShopApp.Utils;
+using ShopApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,5 +54,9 @@ namespace ShopApp.View
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new PdfCreator().GenerateCourseList();
+        }
     }
 }

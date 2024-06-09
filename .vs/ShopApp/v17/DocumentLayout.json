@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dmier\\Desktop\\WPF\\",
+  "WorkspaceRootPath": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\courseshop09_06\\shopapp\\utils\\pdfcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\utils\\pdfcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\view\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\courseshop09_06\\shopapp\\view\\courseslistview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\courseslistview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\dmier\\desktop\\wpf\\shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\courseshop09_06\\shopapp\\view\\courseslistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\view\\courseslistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|c:\\users\\niedz\\desktop\\courseshop09_06\\shopapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|C:\\Users\\niedz\\Desktop\\CourseShop09_06\\shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE45CE5-46BE-449C-BB43-878531B173B8}|ShopApp\\ShopApp.csproj|solutionrelative:shopapp\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,56 +30,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Course.cs",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Model\\Course.cs",
-              "RelativeDocumentMoniker": "ShopApp\\Model\\Course.cs",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\Model\\Course.cs",
-              "RelativeToolTip": "ShopApp\\Model\\Course.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ShopApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\App.xaml.cs",
+              "RelativeToolTip": "ShopApp\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T11:42:34.152Z",
+              "WhenOpened": "2024-06-09T14:11:39.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CartView.xaml",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\CartView.xaml",
-              "RelativeDocumentMoniker": "ShopApp\\View\\CartView.xaml",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\View\\CartView.xaml",
-              "RelativeToolTip": "ShopApp\\View\\CartView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-09T11:28:40.734Z",
+              "Title": "View\\CoursesListView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\View\\CoursesListView.xaml.cs",
+              "RelativeDocumentMoniker": "ShopApp\\View\\CoursesListView.xaml.cs",
+              "ToolTip": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\View\\CoursesListView.xaml.cs",
+              "RelativeToolTip": "ShopApp\\View\\CoursesListView.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T14:08:08.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CartViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\CartViewModel.cs",
-              "RelativeDocumentMoniker": "ShopApp\\ViewModel\\CartViewModel.cs",
-              "ToolTip": "C:\\Users\\dmier\\Desktop\\WPF\\ShopApp\\ViewModel\\CartViewModel.cs",
-              "RelativeToolTip": "ShopApp\\ViewModel\\CartViewModel.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAiwFYAAAAQAAAA",
+              "Title": "PdfCreator.cs",
+              "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\Utils\\PdfCreator.cs",
+              "RelativeDocumentMoniker": "ShopApp\\Utils\\PdfCreator.cs",
+              "ToolTip": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\Utils\\PdfCreator.cs",
+              "RelativeToolTip": "ShopApp\\Utils\\PdfCreator.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T11:24:33.23Z",
+              "WhenOpened": "2024-06-09T12:18:57.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\Model\\Course.cs",
+              "RelativeDocumentMoniker": "ShopApp\\Model\\Course.cs",
+              "ToolTip": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\Model\\Course.cs",
+              "RelativeToolTip": "ShopApp\\Model\\Course.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T00:40:32.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoursesListView.xaml",
+              "DocumentMoniker": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\View\\CoursesListView.xaml",
+              "RelativeDocumentMoniker": "ShopApp\\View\\CoursesListView.xaml",
+              "ToolTip": "C:\\Users\\niedz\\Desktop\\CourseShop09_06\\ShopApp\\View\\CoursesListView.xaml",
+              "RelativeToolTip": "ShopApp\\View\\CoursesListView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-09T12:13:25.66Z",
               "EditorCaption": ""
             }
           ]
