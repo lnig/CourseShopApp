@@ -25,7 +25,6 @@ namespace ShopApp.Model
 
         public Course(int categoryId, string title, string author, string description, string shortDescription, string prize, string imageTitle, float rating, bool isFavorite)
         {
-            // CourseId = courseId; // Usuń tę linię
             CategoryId = categoryId;
             Title = title;
             Author = author;

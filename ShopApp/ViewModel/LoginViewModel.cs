@@ -64,7 +64,7 @@ namespace ShopApp.ViewModel
 
         private bool CanLogin()
         {
-            return !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
+            return !string.IsNullOrWhiteSpace(Email) && !string.IsNullOrWhiteSpace(Password);
         }
 
         private void Login(object parameter)
