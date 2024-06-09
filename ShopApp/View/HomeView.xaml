@@ -148,8 +148,11 @@
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
 
                         <StackPanel>
-                            <TextBlock Text="Category" FontSize="16" FontWeight="Bold"/>
+                            
+                            <TextBlock Text="Categories" FontSize="16" FontWeight="Bold"/>
                             <ItemsControl x:Name="CategoriesListControl" ItemTemplate="{StaticResource CheckBoxTemplate}" />
+
+
                         </StackPanel>
 
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
