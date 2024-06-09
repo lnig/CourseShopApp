@@ -177,6 +177,12 @@ namespace ShopApp.ViewModel
         {
             Order order = new Order(GetCurrentClientId(), FullName, PhoneNumber, Address, Total, DateTime.Now, UserCoursesInCart.ToList());
 
+            if (!CanOrder())
+            {
+                MessageBox.Show("Please fill in the required fields");
+                return;
+            }
+
             if(order != null)
             {
                 orderRepository.SaveOrder(order);
@@ -197,6 +203,14 @@ namespace ShopApp.ViewModel
 
                 MessageBox.Show("Order has been placed successfully and the cart has been cleared.");
             }
+        }
+
+        private bool CanOrder()
+        {
+
+            return !string.IsNullOrWhiteSpace(FullName) &&
+                   !string.IsNullOrWhiteSpace(PhoneNumber) &&
+                   !string.IsNullOrWhiteSpace(Address);
         }
 
         private void ApplyVoucher(object parameter)
