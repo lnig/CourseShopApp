@@ -92,8 +92,10 @@
                         </Grid>
                     </Border>
 
-                    <ComboBox SelectedIndex="0" Background="#F3F4F6" Margin="16 0" BorderThickness="0" FontSize="14" FontWeight="SemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >
+                    <ComboBox x:Name="SortByComboBox" SelectedIndex="0" Background="#F3F4F6" Margin="16 0" BorderThickness="0" FontSize="14" FontWeight="SemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectionChanged="SortByComboBox_SelectionChanged" >
                         <ComboBoxItem Content="Author"/>
+                        <ComboBoxItem Content="Title"/>
+                        <ComboBoxItem Content="Price"/>
                     </ComboBox>
                 </StackPanel>
 

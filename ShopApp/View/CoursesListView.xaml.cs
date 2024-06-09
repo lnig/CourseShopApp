@@ -21,10 +21,13 @@ namespace ShopApp.View
     public partial class CoursesListView : UserControl
     {
         public CoursesListViewModel coursesViewModel = new CoursesListViewModel();
+        bool initEnded = false;
         public CoursesListView()
         {
             InitializeComponent();
-            coursesItemsControl.ItemsSource = coursesViewModel.AllCourses;
+            textSearch.Text = coursesViewModel.filterByTitle;
+            coursesItemsControl.ItemsSource = coursesViewModel.ProcessedCourses;
+            initEnded = true;
         }
 
 
@@ -52,11 +55,29 @@ namespace ShopApp.View
             {
                 textSearch.Visibility = Visibility.Visible;
             }
+            TextBox searchBar = (TextBox)sender;
+            coursesViewModel.filterByTitle = searchBar.Text;
+            coursesViewModel.FilterAndSortCourses();
+            refreshCourseList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new PdfCreator().GenerateCourseList();
+        }
+        private void refreshCourseList()
+        {
+            coursesItemsControl.ItemsSource = coursesViewModel.ProcessedCourses;
+        }
+
+        private void SortByComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (initEnded) {
+                ComboBox sortBy = (ComboBox)sender;
+                coursesViewModel.sortByField = (sortBy.SelectedItem as ComboBoxItem)?.Content.ToString();
+                coursesViewModel.FilterAndSortCourses();
+                refreshCourseList();
+            }
         }
     }
 }

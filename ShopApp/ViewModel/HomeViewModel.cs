@@ -62,7 +62,6 @@ namespace ShopApp.ViewModel
             userId = UserSession.Instance.UserId;
             using (var context = new DataContext())
             {
-                
                 rawCourses = context.course.ToList();
                 processedCourses = rawCourses.ToList();
                 processedCoursesCount = processedCourses.Count;
