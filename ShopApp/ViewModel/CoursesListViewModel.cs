@@ -141,7 +141,7 @@ namespace ShopApp.ViewModel
                 case "title":
                     return courses.OrderBy(course => course.Title).ToList();
                 case "author":
-                    return courses.OrderBy(course => course.Title).ToList();
+                    return courses.OrderBy(course => course.Author).ToList();
                 case "price":
                     return courses.OrderBy(course => decimal.Parse(course.Prize, CultureInfo.InvariantCulture)).ToList();
                 default:

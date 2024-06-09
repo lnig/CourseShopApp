@@ -32,6 +32,7 @@ namespace ShopApp.View
             coursesItemsControl0.ItemsSource = homeViewModel.GetDividedByColumns(3, 0);
             coursesItemsControl1.ItemsSource = homeViewModel.GetDividedByColumns(3, 1);
             coursesItemsControl2.ItemsSource = homeViewModel.GetDividedByColumns(3, 2);
+            CategoriesListControl.ItemsSource = homeViewModel.categories;
             FountProductCount.Text = homeViewModel.processedCoursesCount.ToString();
 
         }
@@ -303,6 +304,30 @@ namespace ShopApp.View
             RefreshProductList();
         }
 
+        private void CategoryCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            Category category = checkBox.DataContext as Category;
 
+            if (category != null && !homeViewModel.allowedCategories.Contains(category))
+            {
+                homeViewModel.allowedCategories.Add(category);
+                homeViewModel.FilterAndSortByOwnState();
+                RefreshProductList();
+            }
+        }
+
+        private void CategoryCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            Category category = checkBox.DataContext as Category;
+
+            if (category != null && homeViewModel.allowedCategories.Contains(category))
+            {
+                homeViewModel.allowedCategories.Remove(category);
+                homeViewModel.FilterAndSortByOwnState();
+                RefreshProductList();
+            }
+        }
     }
 }
