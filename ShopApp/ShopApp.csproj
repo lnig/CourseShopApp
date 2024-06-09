@@ -142,6 +142,9 @@
     <Reference Include="MySql.Data.EntityFrameworkCore, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.EntityFrameworkCore.8.0.22\lib\netstandard2.0\MySql.Data.EntityFrameworkCore.dll</HintPath>
     </Reference>
+    <Reference Include="QuestPDF, Version=2024.3.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuestPDF.2024.3.10\lib\netstandard2.0\QuestPDF.dll</HintPath>
+    </Reference>
     <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
@@ -250,6 +253,7 @@
     <Compile Include="Utils\DataContext.cs" />
     <Compile Include="Utils\MySqlServerVersion.cs" />
     <Compile Include="Repository\UsersRepository.cs" />
+    <Compile Include="Utils\PdfCreator.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\ViewModelBase.cs" />
     <Compile Include="ViewModel\AddCourseViewModel.cs" />
@@ -420,6 +424,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\QuestPDF.2024.3.10\build\net4\QuestPDF.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\QuestPDF.2024.3.10\build\net4\QuestPDF.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\QuestPDF.2024.3.10\build\net4\QuestPDF.targets" Condition="Exists('..\packages\QuestPDF.2024.3.10\build\net4\QuestPDF.targets')" />
 </Project>

@@ -98,7 +98,7 @@
                 </StackPanel>
 
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
-                    <Button Style="{StaticResource navButton}" Width="90" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                    <Button x:Name="Export" Style="{StaticResource navButton}" Width="90" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Click="Button_Click">
                         <StackPanel Orientation="Horizontal" Margin="0 0 16 0">
                             <Image Source="/Assets/Icons/Img/export.png" Height="18"/>
                             <TextBlock Foreground="#565E6D" Text="Export" Margin="8 0 0 0"/>

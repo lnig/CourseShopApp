@@ -16,9 +16,6 @@ using ShopApp.ViewModel;
 
 namespace ShopApp.View
 {
-    /// <summary>
-    /// Logika interakcji dla klasy CartView.xaml
-    /// </summary>
     public partial class CartView : UserControl
     {
         public CartViewModel cartViewModel = new CartViewModel();
