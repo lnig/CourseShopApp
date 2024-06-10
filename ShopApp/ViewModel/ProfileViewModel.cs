@@ -144,9 +144,10 @@ namespace ShopApp.ViewModel
 
         private bool CanChange()
         {
-            return !string.IsNullOrEmpty(TempName) && !string.IsNullOrEmpty(TempSurname) &&
-                   !string.IsNullOrEmpty(TempEmail) && !string.IsNullOrEmpty(TempPassword);
+            return !string.IsNullOrEmpty(TempName) || !string.IsNullOrEmpty(TempSurname) ||
+                   !string.IsNullOrEmpty(TempEmail) || !string.IsNullOrEmpty(TempPassword);
         }
+
 
         private void SaveInformation(object parameter)
         {
@@ -154,19 +155,25 @@ namespace ShopApp.ViewModel
             {
                 if (CanChange())
                 {
-                    if (!usersRepository.EmailTaken(TempEmail))
-                    {
-                        UserSession.Instance.Name = TempName;
-                        UserSession.Instance.Surname = TempSurname;
-                        UserSession.Instance.Email = TempEmail;
-                        UserSession.Instance.Password = TempPassword;
+                    string newName = string.IsNullOrEmpty(TempName) ? UserSession.Instance.Name : TempName;
+                    string newSurname = string.IsNullOrEmpty(TempSurname) ? UserSession.Instance.Surname : TempSurname;
+                    string newEmail = string.IsNullOrEmpty(TempEmail) ? UserSession.Instance.Email : TempEmail;
+                    string newPassword = string.IsNullOrEmpty(TempPassword) ? UserSession.Instance.Password : TempPassword;
 
-                        Name = TempName;
-                        Surname = TempSurname;
-                        Email = TempEmail;
-                        Password = TempPassword;
+                    if (newEmail == UserSession.Instance.Email || !usersRepository.EmailTaken(newEmail))
+                    {
+                        UserSession.Instance.Name = newName;
+                        UserSession.Instance.Surname = newSurname;
+                        UserSession.Instance.Email = newEmail;
+                        UserSession.Instance.Password = newPassword;
+
+                        Name = newName;
+                        Surname = newSurname;
+                        Email = newEmail;
+                        Password = newPassword;
 
                         usersRepository.UpdateUser(UserSession.Instance);
+                        ErrorMessage = "Profile updated successfully.";
                     }
                     else
                     {
@@ -175,11 +182,12 @@ namespace ShopApp.ViewModel
                 }
                 else
                 {
-                    ErrorMessage = "Fill.";
+                    ErrorMessage = "Please provide at least one field to update.";
                 }
             }
             catch (Exception ex)
             {
+                ErrorMessage = $"An error occurred: {ex.Message}";
                 Console.WriteLine(ex.ToString());
             }
         }
