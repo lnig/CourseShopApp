@@ -391,6 +391,7 @@
     <Resource Include="Assets\Icons\Img\add.png" />
     <Resource Include="Assets\Icons\Img\edit.png" />
     <Resource Include="Assets\Icons\Img\products.png" />
+    <Resource Include="Assets\Icons\Img\logout.png" />
     <Content Include="Assets\Icons\Svg\account.svg" />
     <Resource Include="Assets\Icons\Img\account.png" />
     <Content Include="Assets\Icons\Svg\cart.svg" />

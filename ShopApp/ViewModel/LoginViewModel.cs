@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -21,9 +22,15 @@ namespace ShopApp.ViewModel
         private string _password;
         private string _errorMessage;
         private string _userType;
+        private readonly Window _loginView;
 
         private UsersRepository usersRepository = new UsersRepository();
 
+        public LoginViewModel(Window loginView)
+        {
+            _loginView = loginView;
+            LoginCommand = new RelayCommand(Login);
+        }
 
         public string Email
         {
@@ -57,11 +64,6 @@ namespace ShopApp.ViewModel
 
         public ICommand LoginCommand { get; }
 
-        public LoginViewModel()
-        {
-            LoginCommand = new RelayCommand(Login);
-        }
-
         private bool CanLogin()
         {
             return !string.IsNullOrWhiteSpace(Email) && !string.IsNullOrWhiteSpace(Password);
@@ -69,7 +71,6 @@ namespace ShopApp.ViewModel
 
         private void Login(object parameter)
         {
-            
             try
             {
                 if (CanLogin())
@@ -85,11 +86,11 @@ namespace ShopApp.ViewModel
                         else if (user is Administrator admin)
                         {
                             UserSession.Instance.SetAdministrator(admin);
-                            _userType = "Administator";
+                            _userType = "Administrator";
                         }
 
                         OpenHomeView(_userType);
-                        CloseCurrentWindow();
+                        CloseLoginView();
                     }
                     else
                     {
@@ -107,7 +108,7 @@ namespace ShopApp.ViewModel
             }
         }
 
-        private void OpenHomeView(String userType)
+        private void OpenHomeView(string userType)
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
@@ -116,13 +117,12 @@ namespace ShopApp.ViewModel
             });
         }
 
-        private void CloseCurrentWindow()
+        private void CloseLoginView()
         {
-            Window window = Application.Current.MainWindow;
-            if (window != null)
+            _loginView.Dispatcher.Invoke(() =>
             {
-                window.Close();
-            }
+                _loginView.Close();
+            });
         }
 
         public void UpdatePassword(object parameter)
@@ -140,5 +140,4 @@ namespace ShopApp.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
-
 }

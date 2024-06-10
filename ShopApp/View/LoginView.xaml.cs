@@ -20,7 +20,7 @@ namespace ShopApp.View
         public LoginView()
         {
             InitializeComponent();
-            DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel(this);
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)

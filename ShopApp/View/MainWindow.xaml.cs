@@ -131,16 +131,11 @@ namespace ShopApp.View
             ButtonCourses.Background = new SolidColorBrush(Colors.Transparent);
         }
 
-        private void ButtonProfile_MouseEnter(object sender, MouseEventArgs e)
+        private void Logout(object sender, RoutedEventArgs e)
         {
-            ButtonProfile.Background = new SolidColorBrush(Color.FromRgb(243, 244, 246));
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            this.Close();
         }
-
-        private void ButtonProfile_MouseLeave(object sender, MouseEventArgs e)
-        {
-            ButtonProfile.Background = new SolidColorBrush(Colors.Transparent);
-        }
-
-
     }
 }

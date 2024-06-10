@@ -73,17 +73,24 @@
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
                                         <Border BorderBrush="#F3F4F6" BorderThickness="1" Margin="5">
-                                            <StackPanel Margin="10">
-                                                <TextBlock Text="{Binding OrderId}" FontWeight="Bold" FontSize="16"/>
-                                                <TextBlock Text="{Binding OrderDate, StringFormat=yyyy-MM-dd}" FontSize="14"/>
-                                                <TextBlock Text="{Binding TotalPrice, StringFormat=C}" FontSize="14"/>
-                                                <ItemsControl x:Name="coursesItemsControl" ItemsSource="{Binding OrderCourses}">
-                                                    <ItemsControl.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <TextBlock Text="{Binding Course.Title}" FontSize="12"/>
-                                                        </DataTemplate>
-                                                    </ItemsControl.ItemTemplate>
-                                                </ItemsControl>
+                                            <StackPanel Orientation="Vertical">
+                                                <StackPanel Margin="10" Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding OrderId}" FontWeight="Bold" FontSize="16"/>
+                                                    <TextBlock Text="{Binding FullName}" FontSize="16" Margin="12 0 12 0"/>
+                                                    <TextBlock Text="{Binding PhoneNumber}" FontSize="16"/>
+                                                    <TextBlock Text="{Binding Address}" FontSize="16" Margin="12 0 12 0"/>
+                                                    <TextBlock Text="{Binding OrderDate, StringFormat=yyyy-MM-dd}" FontSize="16"/>
+                                                    <TextBlock Text="{Binding TotalPrice, StringFormat=C}" FontSize="16" FontWeight="SemiBold" Margin="12 0 12 0"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Vertical" Margin="10 0 10 10">
+                                                    <ItemsControl x:Name="coursesItemsControl" ItemsSource="{Binding OrderCourses}">
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding Course.Title}" FontSize="12"/>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>
+                                                </StackPanel>
                                             </StackPanel>
                                         </Border>
                                     </DataTemplate>
