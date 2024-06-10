@@ -106,7 +106,10 @@ namespace ShopApp.ViewModel
             }
         }
 
-        public decimal Total => SubTotal - Discount;
+        public decimal Total
+        {
+            get => SubTotal >= Discount ? SubTotal - Discount : 0;
+        }
 
         public ICommand RemoveFromCartCommand { get; private set; }
         public ICommand ApplyVoucherCommand { get; private set; }

@@ -141,8 +141,8 @@
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
 
                         <StackPanel>
-                            <TextBlock Text="Filter by favorite" FontSize="16" FontWeight="Bold"/>
-                            <CheckBox x:Name="FavoriteFilter" Content="Favorite Symbol" Margin="0 12 0 4" Checked="FavoriteFilter_Checked" Unchecked="FavoriteFilter_Unchecked"/>
+                            <TextBlock Text="Clients Favorite" FontSize="16" FontWeight="Bold"/>
+                            <CheckBox x:Name="FavoriteFilter" Content="Bestseller" Margin="0 12 0 4" Checked="FavoriteFilter_Checked" Unchecked="FavoriteFilter_Unchecked"/>
                         </StackPanel>
 
                         <Separator Height="1" Background="#EAECF0" Margin="0 32"/>
